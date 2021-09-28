@@ -1,5 +1,5 @@
-## [insert project title here]
-### Middlebury College, Computer Science CSCI 701 (Fall 2020)
+## [Democratizing Propsective Student Tours: A Virtual Reality Tour into Middlebury College]
+### Middlebury College, Computer Science CSCI 701 (Fall 2022)
 
 ### about
 TODO: a few sentences describing your project
