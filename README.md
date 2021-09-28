@@ -1,5 +1,5 @@
 ## [Democratizing Propsective Student Tours: A Virtual Reality Tour into Middlebury College]
-### Middlebury College, Computer Science CSCI 701 (Fall 2022)
+### Middlebury College, Computer Science CSCI 701 (Fall 2021)
 
 ### about
 TODO: a few sentences describing your project
