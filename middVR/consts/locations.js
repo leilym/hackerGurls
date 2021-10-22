@@ -1,31 +1,44 @@
 export default (locations = {
+  Outside: {
+    name: 'Davis Outside',
+    img: 'Outside.JPG',
+    transitions: [
+      {
+        width: 50,
+        height: 50,
+        yaw: 9.5,
+        pitch: 0.03,
+        goesTo: 'DavisDoor',
+      },
+    ],
+  },
     DavisDoor: {
       name: 'DavisDoor',
-      img: 'Davis1.JPG',
+      img: 'Entrance.JPG',
       tooltips: [
         {
           width: 50,
           height: 50,
-          yaw: 10.3,
+          yaw: 13.3,
           pitch: 0.1,
           text: 'This is the largest library at Middlebury',
-          //img: 'youth_center.jpg',
+
         },
         {
           width: 50,
           height: 50,
-          yaw: 6.7,
-          pitch: 0.16,
-          text: 'This is the largest library at Middlebury',
-          //img: 'shevchenko_theatre.jpg',
+          yaw: 15, //goes left and right
+          pitch: 0.1, //up and down 
+          text: 'This is Wilson cafe',
+
         },
         {
           width: 50,
           height: 50,
-          yaw: 8.65,
-          pitch: 0.16,
-          text: 'Chernihiv Regional State Administration',
-         // img: 'state_administration.jpg',
+          yaw: 20,
+          pitch: 0.1,
+          text: 'Text',
+
         },
       ],
       transitions: [
@@ -34,7 +47,7 @@ export default (locations = {
           height: 50,
           yaw: 3.4,
           pitch: 0.09,
-          goesTo: 'DavisLobby',
+          goesTo: 'Outside',
         },
         {
           width: 50,
@@ -48,13 +61,26 @@ export default (locations = {
           height: 50,
           yaw: 7.96,
           pitch: 0.11,
-          goesTo: 'DavisLobby',
+          goesTo: 'WilsonCafe',
+        },
+      ],
+    },
+    WilsonCafe: {
+      name: 'Wilson Cafe',
+      img: 'Wilson cafe.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 9.5,
+          pitch: 0.03,
+          goesTo: 'DavisDoor',
         },
       ],
     },
     DavisLobby: {
       name: 'Davis Lobby',
-      img: 'Davis2.JPG',
+      img: 'Lobby.JPG',
       tooltips: [
         {
           width: 35,
@@ -62,15 +88,15 @@ export default (locations = {
           yaw: 9.7,
           pitch: 0.1,
           text: 'Welcome to the lobby',
-          //img: 'khmeln_monument.jpg',
+
         },
         {
           width: 50,
           height: 50,
           yaw: 7.35,
           pitch: 0.16,
-          text: 'Pyatnytska Church',
-          //img: 'pyatnyckaya_church.jpg',
+          text: 'Lobby Left',
+
         },
       ],
       transitions: [
@@ -101,7 +127,7 @@ export default (locations = {
           height: 35,
           yaw: 14.32,
           pitch: 0.1,
-          text: 'Chernihiv National Bank',
+          text: '___',
           //img: 'national_bank.jpg',
         },
       ],
@@ -120,7 +146,7 @@ export default (locations = {
         {
           width: 50,
           height: 50,
-          yaw: 18.9,
+          yaw: 11.9,
           pitch: 0.02,
           goesTo: 'WorldHello',
         },
