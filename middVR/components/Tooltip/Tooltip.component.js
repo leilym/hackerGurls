@@ -15,8 +15,8 @@ export default class TooltipComponent extends React.Component {
     tooltipModule.resizeTooltip (this.props.index, 300, 300);
     this.setState ({
       source: `img/attractions/${this.props.infoImg}`,
-      width: 300,
-      height: 200,
+      width: 100,
+      height: 100,
       isMouseOver: true,
     });
   }
