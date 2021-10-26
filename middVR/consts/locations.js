@@ -118,8 +118,138 @@ export default (locations = {
           pitch: 0.01,
           goesTo: 'FromEntranceRight',
         },
+        {
+          width: 50,
+          height: 50,
+          yaw: 5.55,
+          pitch: 0.01,
+          goesTo: 'FromLobbyLeft',
+        },
       ],
     },
+    FromLobbyLeft: {
+      name: 'From Lobby Left',
+      img: 'FromLobbyLeft.JPG',
+      tooltips: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 8,
+          pitch: 0.01,
+          text: 'This is the Technology Help Desk! Students come here for both hardware and software help.',
+
+        },
+      ],
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 2.6,
+          pitch: 0.01,
+          goesTo: 'DavisLobby', // go to upstairs
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 5.4,
+          pitch: 0.01,
+          goesTo: 'PrinterCorridorFirst', //go to printers 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 0,
+          pitch: 0.01,
+          goesTo: 'LobbyRightIn',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 4.7,
+          pitch: 0.01,
+          goesTo: 'DavisLobby',
+        },
+      ],
+    },
+
+    PrinterCorridorFirst: {
+      name: 'Printer Corridor First Floor',
+      img: 'PrinterCorridorFirst.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: -.2,
+          pitch: 0.01,
+          goesTo: 'FromLobbyLeft',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 9.3,
+          pitch: 0.01,
+          goesTo: 'PastPrinterCorner',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 4.3,
+          pitch: 0.01,
+          goesTo: 'PrintersFirstFloor',
+        },
+      ],
+    },
+
+    PastPrinterCorner: {
+      name: 'PastPrinterCorner',
+      img: 'PastPrinterCorner.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.5,
+          pitch: 0.01,
+          goesTo: 'FromLobbyLeft',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: -1,
+          pitch: 0.01,
+          goesTo: 'PrintersFirstFloor',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 7,
+          pitch: 0.01,
+          goesTo: 'PrintersFirstFloor',
+        },
+      ],
+    },
+
+
+    PrintersFirstFloor: {
+      name: 'Printer First Floor',
+      img: 'PrintersFirstFloor.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 0,
+          pitch: 0.01,
+          goesTo: 'FromLobbyLeft',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 6,
+          pitch: 0.01,
+          goesTo: 'PrintersFirstFloor',
+        },
+      ],
+    },
+
     FromEntranceRight: {
       name: 'From Entrance Lobby',
       img: 'FromEntranceRight.JPG',
@@ -153,7 +283,7 @@ export default (locations = {
           height: 50,
           yaw: 0.2,
           pitch: 0.01,
-          goesTo: 'OutsideWilson',
+          goesTo: 'LobbyRightIn',
         },
         {
           width: 50,
@@ -164,6 +294,44 @@ export default (locations = {
         },
       ],
     },
+
+    LobbyRightIn: {
+      name: 'Lobby Right to Lobby In',
+      img: 'LobbyRightIn.JPG',
+      tooltips: [
+      ],
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.3,
+          pitch: 0.01,
+          goesTo: 'DavisDoor',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 1.1,
+          pitch: 0.01,
+          goesTo: 'FromEntranceRight',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 0.2,
+          pitch: 0.01,
+          goesTo: 'OutsideWilson', //make this go to the other side 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 4.6,
+          pitch: 0.01,
+          goesTo: 'DavisLobby',
+        },
+      ],
+    },
+
     OutsideWilson: {
       name: 'Outside Wilson',
       img: 'OutsideWilsonMedia.JPG',
@@ -183,7 +351,7 @@ export default (locations = {
           height: 50,
           yaw: 3.3,
           pitch: 0.01,
-          goesTo: 'FromEntranceRight',
+          goesTo: 'LobbyRightIn',
         },
         {
           width: 50,
