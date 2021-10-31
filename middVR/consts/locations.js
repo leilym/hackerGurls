@@ -1,6 +1,8 @@
 
 //starting outside the door 
 export default (locations = {
+
+//Below are Davis Maps 
   Outside: {
     name: 'Outside',
     img: 'Outside.JPG',
@@ -14,7 +16,8 @@ export default (locations = {
       },
     ],
   },
-    DavisDoor: {
+    
+  DavisDoor: {
       name: 'DavisDoor',
       img: 'Test.JPG',
       tooltips: [
@@ -24,7 +27,6 @@ export default (locations = {
           yaw: 6.8,
           pitch: 0.01,
           text: 'Welcome to Davis Library! This is the largest library at Middlebury',
-
         },
         {
           width: 50,
@@ -59,7 +61,8 @@ export default (locations = {
         },
       ],
     },
-    WilsonCafe: {
+    
+  WilsonCafe: {
       name: 'Wilson Cafe',
       img: 'WilsonCafe.JPG',
       transitions: [
@@ -82,7 +85,8 @@ export default (locations = {
         },
       ]
     },
-    DavisLobby: {
+    
+  DavisLobby: {
       name: 'Davis Lobby',
       img: 'Lobby.JPG',
       tooltips: [
@@ -127,19 +131,10 @@ export default (locations = {
         },
       ],
     },
-    FromLobbyLeft: {
+   
+  FromLobbyLeft: {
       name: 'From Lobby Left',
       img: 'FromLobbyLeft.JPG',
-      tooltips: [
-        {
-          width: 50,
-          height: 50,
-          yaw: 8,
-          pitch: 0.01,
-          text: 'This is the Technology Help Desk! Students come here for both hardware and software help.',
-
-        },
-      ],
       transitions: [
         {
           width: 50,
@@ -160,19 +155,89 @@ export default (locations = {
           height: 50,
           yaw: 0,
           pitch: 0.01,
-          goesTo: 'LobbyRightIn',
+          goesTo: 'DownLobbyLeft',
         },
         {
           width: 50,
           height: 50,
           yaw: 4.7,
           pitch: 0.01,
-          goesTo: 'DavisLobby',
+          goesTo: 'DavisLobby', //go up stairs 
         },
       ],
     },
 
-    PrinterCorridorFirst: {
+  DownLobbyLeft: {
+      name: 'Down Lobby Left',
+      img: 'DownLobbyLeft.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.1,
+          pitch: 0.01,
+          goesTo: 'DownDownLobbyLeft', // go to upstairs
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 5.4,
+          pitch: 0.01,
+          goesTo: 'DownLobbyLeft', //go to printers 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 0,
+          pitch: 0.01,
+          goesTo: 'LobbyRightIn',
+        },
+      ],
+    },
+
+  DownDownLobbyLeft: {
+      name: 'Down Down Lobby Left',
+      img: 'DownDownLobbyLeft.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 0,
+          pitch: 0.01,
+          goesTo: 'BackHallway', // go to upstairs
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 5.4,
+          pitch: 0.01,
+          goesTo: 'PrinterCorridorFirst', //go to printers 
+        },
+      ],
+    },
+
+  BackHallway: {
+      name: 'BackHallway',
+      img: 'BackHallway.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 0,
+          pitch: 0.01,
+          goesTo: 'CTLR', // go to upstairs
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 5.4,
+          pitch: 0.01,
+          goesTo: 'DownDownLobbyLeft', //go to printers 
+        },
+      ],
+    },
+
+  PrinterCorridorFirst: {
       name: 'Printer Corridor First Floor',
       img: 'PrinterCorridorFirst.JPG',
       transitions: [
@@ -200,57 +265,150 @@ export default (locations = {
       ],
     },
 
-    PastPrinterCorner: {
+  PastPrinterCorner: {
       name: 'PastPrinterCorner',
       img: 'PastPrinterCorner.JPG',
       transitions: [
         {
           width: 50,
           height: 50,
-          yaw: 3.5,
+          yaw: 4.5,
           pitch: 0.01,
-          goesTo: 'FromLobbyLeft',
+          goesTo: 'InsideCarrellByPrinters',
         },
         {
           width: 50,
           height: 50,
-          yaw: -1,
+          yaw: 9.1,
           pitch: 0.01,
-          goesTo: 'PrintersFirstFloor',
+          goesTo: 'PrinterCorridorFirst',
         },
         {
           width: 50,
           height: 50,
-          yaw: 7,
+          yaw: 6.4,
           pitch: 0.01,
-          goesTo: 'PrintersFirstFloor',
+          goesTo: 'DownPrinterCorner',
         },
       ],
     },
 
+  InsideCarrellByPrinters: {
+      name: 'InsideCarrellByPrinters',
+      img: 'InsideCarrellByPrinters.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.3,
+          pitch: 0.01,
+          goesTo: 'PastPrinterCorner',
+        },
+      ],
+      tooltips: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.6,
+          pitch: 0.01, 
+          text: 'These carrels are where seniors culminate their studies into their thesis!',
+        },
+      ],
+    },
 
-    PrintersFirstFloor: {
+  DownPrinterCorner: {
+      name: 'DownPrinterCorner',
+      img: 'DownPrinterCorner.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 6.4,
+          pitch: 0.01,
+          goesTo: 'FirstFloorLeftCorner',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 9.3,
+          pitch: 0.01,
+          goesTo: 'PastPrinterCorner',
+        },
+      ],
+    },
+
+  FirstFloorLeftCorner: {
+      name: 'FirstFloorLeftCorner',
+      img: 'FirstFloorLeftCorner.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: -1.2,
+          pitch: 0.01,
+          goesTo: '',//go to elevator
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 7.4,
+          pitch: 0.01,
+          goesTo: 'BackHallway',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 9,
+          pitch: 0.01,
+          goesTo: 'DownPrinterCorner', 
+        },
+      ],
+    },
+
+  BackHallway: {
+      name: 'BackHallway',
+      img: 'BackHallway.JPG',
+      transitions: [
+        
+        {
+          width: 50,
+          height: 50,
+          yaw: 7.35,
+          pitch: 0.01,
+          goesTo: 'FirstFloorLeftCorner',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 9.9,
+          pitch: 0.01,
+          goesTo: 'CTLR'//CTLR, 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 7.75,
+          pitch: 0.01,
+          goesTo: ''//take the stairs up
+        },
+      ],
+    },
+
+  PrintersFirstFloor: {
       name: 'Printer First Floor',
       img: 'PrintersFirstFloor.JPG',
       transitions: [
         {
           width: 50,
           height: 50,
-          yaw: 0,
+          yaw: 1,
           pitch: 0.01,
-          goesTo: 'FromLobbyLeft',
-        },
-        {
-          width: 50,
-          height: 50,
-          yaw: 6,
-          pitch: 0.01,
-          goesTo: 'PrintersFirstFloor',
+          goesTo: 'PrinterCorridorFirst',
         },
       ],
     },
 
-    FromEntranceRight: {
+  FromEntranceRight: {
       name: 'From Entrance Lobby',
       img: 'FromEntranceRight.JPG',
       tooltips: [
@@ -269,14 +427,14 @@ export default (locations = {
           height: 50,
           yaw: 2.8,
           pitch: 0.01,
-          goesTo: 'DavisDoor',
+          goesTo: 'RightStairs', //up from main stairs 
         },
         {
           width: 50,
           height: 50,
           yaw: 1.1,
           pitch: 0.01,
-          goesTo: 'FromEntranceRight',
+          goesTo: 'FromEntranceRight', //needs to go upstairs from help desk
         },
         {
           width: 50,
@@ -295,7 +453,7 @@ export default (locations = {
       ],
     },
 
-    LobbyRightIn: {
+  LobbyRightIn: {
       name: 'Lobby Right to Lobby In',
       img: 'LobbyRightIn.JPG',
       tooltips: [
@@ -306,7 +464,7 @@ export default (locations = {
           height: 50,
           yaw: 3.3,
           pitch: 0.01,
-          goesTo: 'DavisDoor',
+          goesTo: 'DavisDoor', 
         },
         {
           width: 50,
@@ -332,7 +490,49 @@ export default (locations = {
       ],
     },
 
-    OutsideWilson: {
+  RightStairs: {
+      name: 'RightStairs',
+      img: 'RightStairs.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 4.3,
+          pitch: 0.01,
+          goesTo: 'UpstairsLobby', //keep going up
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 0.75,
+          pitch: -0.7,
+          goesTo: 'FromEntranceRight', 
+        },
+      ],
+    },
+
+    UpstairsLobby: {
+      name: 'UpstairsLobby',
+      img: 'UpstairsLobby.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 4.2,
+          pitch: 0.01,
+          goesTo: 'UpstairsLobby', //go right
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 5.25,
+          pitch: 0.01,
+          goesTo: 'FromEntranceRight', //go outside 
+        },
+      ],
+    },  
+
+  OutsideWilson: {
       name: 'Outside Wilson',
       img: 'OutsideWilsonMedia.JPG',
       tooltips: [
@@ -369,7 +569,22 @@ export default (locations = {
         },
       ],
     },
-    CTLR: {
+
+  WilsonMediaLab: {
+      name: 'WilsonMediaLab',
+      img: 'WilsonMediaLab.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.15,
+          pitch: 0.01,
+          goesTo: 'OutsideWilson',
+        },
+      ],
+    },  
+   
+  CTLR: {
       name: 'CTLR',
       img: 'CTLR.JPG',
       tooltips: [
@@ -392,9 +607,9 @@ export default (locations = {
         {
           width: 50,
           height: 50,
-          yaw: 6.3,
+          yaw: 6.0,
           pitch: 0.01,
-          goesTo: 'OutsideCTLR',
+          goesTo: 'BackHallway',
         },
       ],
     },
