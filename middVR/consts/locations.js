@@ -613,4 +613,55 @@ export default (locations = {
         },
       ],
     },
+
+    
+    AnimationStudio: {
+      name: 'Animation Studio',
+      img: 'AnimationStudio.JPG',
+      tooltips: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 7.8,
+          pitch: 0.01,
+          text: 'This is a space for students interested in ',
+        },
+      ],
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.5,
+          pitch: 0.01,
+          goesTo: 'OutsideAnimationStudio',
+        },
+      ],
+    },
+    
+    OutsideAnimationSudio: {
+      name: 'Outside Animation Studio',
+      img: 'AnimationOutside.JPG',
+      tooltips: [
+        {
+        width: 50,
+        height: 50,
+        yaw: 7.8,
+        pitch: 0.01,
+        text: 'This is a hallway exiting the Animation Studio',
+        },
+      ],
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.5,
+          pitch: 0.01,
+          goesTo: '', //not sure where this goes to 
+        },
+      ],
+    },
+
+
+
+
   });
