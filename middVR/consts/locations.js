@@ -434,7 +434,7 @@ export default (locations = {
           height: 50,
           yaw: 1.1,
           pitch: 0.01,
-          goesTo: 'FromEntranceRight', //needs to go upstairs from help desk
+          goesTo: 'StudyRoomStairs2nd', //needs to go upstairs from help desk
         },
         {
           width: 50,
@@ -511,26 +511,198 @@ export default (locations = {
       ],
     },
 
-    UpstairsLobby: {
-      name: 'UpstairsLobby',
-      img: 'UpstairsLobby.JPG',
+  UpstairsLobby: {
+    name: 'UpstairsLobby',
+    img: 'UpstairsLobby.JPG',
+    transitions: [
+      {
+        width: 50,
+        height: 50,
+        yaw: 9.7,
+        pitch: -0.1,
+        goesTo: 'RightStairs', //go downstairs
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: 5.2,
+        pitch: 0.01,
+        goesTo: 'Terrace2nd', //go outside 
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: 10.45,
+        pitch: 0.01,
+        goesTo: 'LeftFromLobbyStairs', //go right 
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: 8.25,
+        pitch: 0.01,
+        goesTo: 'RightFromLobbyStairs', //go right 
+      },
+    ],
+    tooltips: [
+      {
+        width: 50,
+        height: 50,
+        yaw: 9.2,
+        pitch: 0.2,
+        text: 'This is a canvas paint piece by Matt Mullican called The Art of Writing and was commissioned by the college.',
+      },
+    ]
+    },
+    
+  Terrace2nd: {
+      name: 'Terrace2nd',
+      img: 'Terrace2nd.JPG',
       transitions: [
         {
           width: 50,
           height: 50,
-          yaw: 4.2,
+          yaw: 3.15,
           pitch: 0.01,
-          goesTo: 'UpstairsLobby', //go right
+          goesTo: 'UpstairsLobby',
+        },
+      ],
+    }, 
+
+  LeftFromLobbyStairs: {
+      name: 'LeftFromLobbyStairs',
+      img: 'LeftFromLobbyStairs.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 5.2,
+          pitch: 0.01,
+          goesTo: 'UpstairsLobby',
         },
         {
           width: 50,
           height: 50,
-          yaw: 5.25,
+          yaw: 3.2,
           pitch: 0.01,
-          goesTo: 'FromEntranceRight', //go outside 
+          goesTo: 'Outside301A',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 7.7,
+          pitch: 0.01,
+          goesTo: 'StudyRoomStairs2nd',
         },
       ],
-    },  
+    },
+
+  Outside301A: {
+    name: 'Outside301A',
+    img: 'Outside301A.JPG',
+    transitions: [
+      {
+        width: 50,
+        height: 50,
+        yaw: 6.45,
+        pitch: 0.01,
+        goesTo: 'UpstairsLobby',
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: 8.2,
+        pitch: 0.01,
+        goesTo: 'LeftFromLobbyStairs',
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: 9.4,
+        pitch: 0.01,
+        goesTo: 'Outside301F',
+      },
+    ],
+    tooltips: [
+      {
+        width: 50,
+        height: 50,
+        yaw: 10.3,
+        pitch: 0.01,
+        text: 'These are some study rooms that students can use upon reserving',
+      },
+    ]
+  },
+ 
+  Outside301F: {
+    name: 'Outside301F',
+    img: 'Outside301F.JPG',
+    transitions: [
+      {
+        width: 50,
+        height: 50,
+        yaw: 4.7,
+        pitch: 0.01,
+        goesTo: 'Outside301A',
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: 0.8,
+        pitch: 0.01,
+        goesTo: 'CornerNear301F',
+      },
+    ],
+  }, 
+
+  CornerNear301F: {
+    name: 'CornerNear301F',
+    img: 'CornerNear301F.JPG',
+    transitions: [
+      {
+        width: 50,
+        height: 50,
+        yaw: 5,
+        pitch: 0.01,
+        goesTo: 'Outside301F',
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: 5.2,
+        pitch: 0.01,
+        goesTo: 'StudyRoomStairs2nd',
+      },
+    ],
+  }, 
+
+  StudyRoomStairs2nd: {
+    name: 'StudyRoomStairs2nd',
+    img: 'StudyRoomStairs2nd.JPG',
+    transitions: [
+      {
+        width: 50,
+        height: 50,
+        yaw: 4.85,
+        pitch: 0.01,
+        goesTo: 'CornerNear301F',
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: 5.2,
+        pitch: 0.01,
+        goesTo: 'LeftFromLobbyStairs',
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: 4.55,
+        pitch: 0,
+        goesTo: 'FromEntranceRight',
+      },
+    ],
+  }, 
 
   OutsideWilson: {
       name: 'Outside Wilson',
@@ -660,8 +832,5 @@ export default (locations = {
         },
       ],
     },
-
-
-
 
   });
