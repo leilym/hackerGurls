@@ -1056,6 +1056,8 @@ export default (locations = {
       ],
     },
 
+    //guide on naming: 
+    // leftSide of the main stairs (from ground floor lobby) 2nd Floor 
     LeftSideStairs2F:{
       name: 'study carrels - 2nd floor',
       img: "LeftSideStairs2F.JPG",
@@ -1065,7 +1067,7 @@ export default (locations = {
           height: 50,
           yaw: -1,
           pitch: 0.01,
-          goesTo: '',
+          goesTo: 'LeftSideStairs2F2',
         },
         {
           width: 50,
@@ -1074,7 +1076,74 @@ export default (locations = {
           pitch: 0.01,
           goesTo: 'LeftSideStairs',
         },
-        
+      ],
+    },
+
+    // leftSide of the main stairs (from ground floor lobby) 2nd Floor - 2nd part, further down
+    LeftSideStairs2F2:{
+      name: 'Second Floor - Ending',
+      img: "LeftSideStairs2F2.JPG",
+      transitions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.5,
+          pitch: 0.01,
+          goesTo: 'LeftSideStairs2F',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.5,
+          pitch: 0.01,
+          goesTo: 'RightSide2FEnd',
+        },
+      ],
+    },
+
+    // leftSide of the main stairs (from ground floor lobby) 2nd Floor - the ending
+    RightSide2FEnd:{
+      name: 'Second Floor - Study desks',
+      img: "LeftSideStairs2F2.JPG",
+      transitions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: -6,
+          pitch: 0.01,
+          goesTo: 'LeftSideStairs2F2',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.5,
+          pitch: 0.01,
+          goesTo: 'RightSide2FEnd2.JPG', 
+        },
+      ],
+    },
+
+    // leftSide of the main stairs (from ground floor lobby) 2nd Floor - second part of the ending 
+    //is this an end to the tour? 
+    RightSide2FEnd2:{
+      name: 'Second Floor - Study desks',
+      img: "LeftSideStairs2F2.JPG",
+      transitions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: -6,
+          pitch: 0.01,
+          goesTo: 'RightSide2FEnd',
+          text: "beautiful view of Middlebury's mountains"
+        },
+        // {
+        //   width: 50,
+        //   height: 50,
+        //   yaw: 3.5,
+        //   pitch: 0.01,
+        //   goesTo: '', 
+        // },
       ],
     },
 
