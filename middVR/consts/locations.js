@@ -978,9 +978,61 @@ export default (locations = {
           height: 50,
           yaw: 1,
           pitch: 0.01,
-          goesTo: 'CTLRRight', //not sure where this goes to 
+          goesTo: '',  
         },
       ],
-    },    
+    },
+    
+    OutsideMeditationRoom1:{
+      name: 'Outside Meditation Room',
+      img: "OutsideMedRCurtain.JPG",
+      transitions:[
+        {
+        width: 50,
+        height: 50,
+        yaw: 3.5,
+        pitch: 0.01,
+        goesTo: 'MeditationRoom', 
+        },
+        
+      ]
+    },
+
+    OutsideMeditationRoom2:{
+      name: 'Outside Meditation Room',
+      img: "OutsideMedR.JPG",
+      transitions:[
+        {
+        width: 50,
+        height: 50,
+        yaw: 3.5,
+        pitch: 0.01,
+        goesTo: 'RightFromLobbyStairs', //not sure where this goes to 
+        },
+        
+      ]
+    },
+
+    MeditationRoom: {
+      name: 'Meditation and Resting room',
+      img: "MeditationRoom.JPG",
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.7,
+          pitch: 0.01,
+          goesTo: 'OutsideMeditationRoom1'
+        },
+
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.5,
+          pitch: 0.01,
+          goesTo: 'OutsideMeditationRoom2', 
+        },
+      ],
+    },
 
   });
