@@ -2,6 +2,21 @@
 //starting outside the door 
 export default (locations = {
 
+//front page transitions 
+
+  StartPoint: {
+    name: 'landing',
+    img: 'blackScreen.JPG',
+    transitions: [
+      {
+        width: 30,
+        height: 50,
+        yaw: 9.55,
+        pitch: 0.01,
+        goesTo: 'Outside',
+      },
+    ],
+  },
 //Below are Davis Maps 
   Outside: {
     name: 'Outside',
