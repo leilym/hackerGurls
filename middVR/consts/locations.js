@@ -978,7 +978,7 @@ export default (locations = {
           height: 50,
           yaw: 1,
           pitch: 0.01,
-          goesTo: '',  
+          goesTo: '',  //this was CTLRRight
         },
       ],
     },
@@ -990,7 +990,7 @@ export default (locations = {
         {
         width: 50,
         height: 50,
-        yaw: 3.5,
+        yaw: -1.06,
         pitch: 0.01,
         goesTo: 'MeditationRoom', 
         },
@@ -1005,7 +1005,7 @@ export default (locations = {
         {
         width: 50,
         height: 50,
-        yaw: 3.5,
+        yaw: 1,
         pitch: 0.01,
         goesTo: 'RightFromLobbyStairs', //not sure where this goes to 
         },
@@ -1020,7 +1020,7 @@ export default (locations = {
         {
           width: 50,
           height: 50,
-          yaw: 3.7,
+          yaw: 1.5,
           pitch: 0.01,
           goesTo: 'OutsideMeditationRoom1'
         },
@@ -1028,10 +1028,53 @@ export default (locations = {
         {
           width: 50,
           height: 50,
-          yaw: 3.5,
+          yaw: -1.5,
           pitch: 0.01,
           goesTo: 'OutsideMeditationRoom2', 
         },
+      ],
+    },
+
+    LeftSideStairs:{
+      name: 'study carrels - 2nd floor',
+      img: "LeftSideStairs2.JPG",
+      transitions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.7,
+          pitch: 0.01,
+          goesTo: '' //I think it should be RightFromLobbyStairs but i wasn't sure
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 2,
+          pitch: 0.01,
+          goesTo: 'LeftSideStairs2F', 
+        },
+      ],
+    },
+
+    LeftSideStairs2F:{
+      name: 'study carrels - 2nd floor',
+      img: "LeftSideStairs2F.JPG",
+      transitions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: -1,
+          pitch: 0.01,
+          goesTo: '',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 1,
+          pitch: 0.01,
+          goesTo: 'LeftSideStairs',
+        },
+        
       ],
     },
 
