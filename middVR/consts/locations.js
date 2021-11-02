@@ -464,14 +464,14 @@ export default (locations = {
           height: 50,
           yaw: 3.3,
           pitch: 0.01,
-          goesTo: 'DavisDoor', 
+          goesTo: 'DavisLobby', 
         },
         {
           width: 50,
           height: 50,
           yaw: 1.1,
           pitch: 0.01,
-          goesTo: 'FromEntranceRight',
+          goesTo: 'iMacWorkStation',
         },
         {
           width: 50,
@@ -485,10 +485,63 @@ export default (locations = {
           height: 50,
           yaw: 4.6,
           pitch: 0.01,
-          goesTo: 'DavisLobby',
+          goesTo: 'DownLobbyLeft',
         },
       ],
     },
+
+  iMacWorkStation: {
+      name: 'iMacWorkStation',
+      img: 'iMacWorkStation.JPG',
+      tooltips: [
+      ],
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 0.9,
+          pitch: 0.01,
+          goesTo: 'LobbyRightIn',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 2.8,
+          pitch: 0.01,
+          goesTo: 'OutsideAnimationStudio',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 5.4,
+          pitch: 0.01,
+          goesTo: 'BloombergStation',
+        },
+      ],
+    }, 
+
+  BloombergStation: {
+      name: 'BloombergStation',
+      img: 'BloombergStation.JPG',
+      tooltips: [
+      ],
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 0.9,
+          pitch: 0.01,
+          goesTo: 'FromEntranceRight',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.2,
+          pitch: 0.01,
+          goesTo: 'iMacWorkStation',
+        },
+      ],
+    },    
 
   RightStairs: {
       name: 'RightStairs',
@@ -511,6 +564,68 @@ export default (locations = {
       ],
     },
 
+    RightFromLobbyStairs: {
+      name: 'RightFromLobbyStairs',
+      img: 'RightFromLobbyStairs.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 4.3,
+          pitch: 0.01,
+          goesTo: 'UpstairsLobby', //keep going up
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 0.75,
+          pitch: 0.01,
+          goesTo: 'UpstairsRightRight', 
+        },
+      ],
+    },  
+
+    UpstairsRightRight: {
+      name: 'UpstairsRightRight',
+      img: 'UpstairsRightRight.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 4.3,
+          pitch: 0.01,
+          goesTo: 'RightFromLobbyStairs', //keep going up
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 0.75,
+          pitch: 0.01,
+          goesTo: 'UpstairsCenterOver', 
+        },
+      ],
+    },    
+
+    UpstairsCenterOver: {
+      name: 'UpstairsCenterOver',
+      img: 'UpstairsCenterOver.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 4.3,
+          pitch: 0.01,
+          goesTo: 'UpstairsRightRight', //keep going up
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 0.75,
+          pitch: 0.01,
+          goesTo: 'StudyRoomStairs2nd', 
+        },
+      ],
+    },     
   UpstairsLobby: {
     name: 'UpstairsLobby',
     img: 'UpstairsLobby.JPG',
@@ -787,7 +902,7 @@ export default (locations = {
     },
 
     
-    AnimationStudio: {
+  AnimationStudio: {
       name: 'Animation Studio',
       img: 'AnimationStudio.JPG',
       tooltips: [
@@ -810,7 +925,7 @@ export default (locations = {
       ],
     },
     
-    OutsideAnimationSudio: {
+  OutsideAnimationStudio: {
       name: 'Outside Animation Studio',
       img: 'AnimationOutside.JPG',
       tooltips: [
@@ -828,9 +943,44 @@ export default (locations = {
           height: 50,
           yaw: 3.5,
           pitch: 0.01,
-          goesTo: '', //not sure where this goes to 
+          goesTo: 'AnimationStudio', //not sure where this goes to 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 6.3,
+          pitch: 0.01,
+          goesTo: 'iMacWorkStation', //not sure where this goes to 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 9,
+          pitch: 0.01,
+          goesTo: 'BehindAnimation', //not sure where this goes to 
         },
       ],
     },
+
+  BehindAnimation: {
+      name: 'Behind Animation',
+      img: 'BehindAnimation.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.5,
+          pitch: 0.01,
+          goesTo: 'AnimationStudio', //not sure where this goes to 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 1,
+          pitch: 0.01,
+          goesTo: 'CTLRRight', //not sure where this goes to 
+        },
+      ],
+    },    
 
   });
