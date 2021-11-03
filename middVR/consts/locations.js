@@ -86,7 +86,7 @@ export default (locations = {
       ]
     },
     
-  DavisLobby: {
+    DavisLobby: {
       name: 'Davis Lobby',
       img: 'Lobby.JPG',
       tooltips: [
@@ -131,6 +131,30 @@ export default (locations = {
         },
       ],
     },
+
+    HelpDesk:{
+      name: 'IT HelpDesk',
+      img: 'HelpDesk.JPG',
+      tooltips: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 2,
+          pitch: 0.01,
+          text: 'Students, Faculty and Staff can resolve their technological issues in-person or over Zoom at HelpDesk. ',
+        },
+      ],
+      transitions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.5,
+          pitch: 0.01,
+          goesTo: 'FromEntranceRight',
+        },
+      ],
+    },
+   
    
   FromLobbyLeft: {
       name: 'From Lobby Left',
@@ -449,6 +473,13 @@ export default (locations = {
           yaw: 4.1,
           pitch: 0.01,
           goesTo: 'DavisLobby',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 1.3,
+          pitch: 0.01,
+          goesTo: 'HelpDesk',
         },
       ],
     },
