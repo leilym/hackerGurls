@@ -1397,6 +1397,23 @@ export default (locations = {
     F0Lounge:{
       name: 'Study Lounge - Downstairs',
       img: "F0Lounge.JPG",
+      tooltips: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 3,
+          pitch: 0.01,
+          text: 'Click to enter one of the study rooms. They can be reserved for individual or group study sessions.',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 5.4,
+          pitch: 0.01,
+          text: 'Click to explore furter deeper parts of this floor.',
+        },
+
+      ],
       transitions:[
         {
           width: 50,
@@ -1419,21 +1436,99 @@ export default (locations = {
           pitch: 0.01,
           goesTo: 'F0150A' 
         },
+        {
+          width: 50,
+          height: 50,
+          yaw: 5.1,
+          pitch: 0.01,
+          goesTo: 'F0LeftMostHall' 
+        },
       ],
     },
-
-    F0150A:{
-      name: "Study Rooms",
-      img: "F0150A.JPG",
-      tooltips: [
+    F0LeftMostHall:{
+      name: "Bottom Floor shelves",
+      img: "F0LeftMostHall",
+      tranistions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: -2,
+          pitch: 0.01,
+          goesTo: 'F0Lounge' 
+        },
         {
           width: 50,
           height: 50,
           yaw: 1,
           pitch: 0.01,
-          text: 'Click to enter one of the study rooms. They can be reserved for individual or group study sessions.',
+          goesTo: 'F0LeftMostHall2' 
         },
       ],
+    },
+
+
+    F0LeftMostHall2:{
+      name: "Shelves Hallway 2",
+      img: "F0LeftMostHall2.JPG",
+      transitions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: -1,
+          pitch: 0.01,
+          goesTo: 'F0LeftMostHall' 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 2.5,
+          pitch: 0.01,
+          goesTo: 'F0LeftMostHall3' 
+        },
+      ],
+    },
+
+
+    F0LeftMostHall3:{
+      name: "Shelves Hallway 3",
+      img: "F0LeftMostHall3.JPG",
+      transitions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: -2,
+          pitch: 0.01,
+          goesTo: 'F0LeftMostHall2' 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 3,
+          pitch: 0.01,
+          goesTo: 'F0LeftMostEnd' 
+        },
+      ],
+    },
+
+
+    F0LeftMostEnd:{
+      name: "Exit - first floor",
+      img: "F0LeftMostEnd.JPG",
+      tranistions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: -1,
+          pitch: 0.01,
+          goesTo: 'F0LeftMostHall3' 
+        },
+      ],
+    },
+    
+    //study room in the first floor
+    F0150A:{
+      name: "Study Rooms",
+      img: "F0150A.JPG",
       transitions:[
         {
           width: 50,
