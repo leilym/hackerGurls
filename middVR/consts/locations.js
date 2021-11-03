@@ -582,6 +582,13 @@ export default (locations = {
           pitch: 0.01,
           goesTo: 'UpstairsRightRight', 
         },
+        {
+          width: 50,
+          height: 50,
+          yaw: 2.3,
+          pitch: 0.01,
+          goesTo: 'OutsideMeditationRoom2', 
+        },
       ],
     },  
 
@@ -602,6 +609,13 @@ export default (locations = {
           yaw: 0.75,
           pitch: 0.01,
           goesTo: 'UpstairsCenterOver', 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw:2,
+          pitch: 0.01,
+          goesTo: 'LeftSideStairs', 
         },
       ],
     },    
@@ -816,6 +830,13 @@ export default (locations = {
         pitch: 0,
         goesTo: 'FromEntranceRight',
       },
+      {
+        width: 50,
+        height: 50,
+        yaw: 3,
+        pitch: 0,
+        goesTo: '', //it goes to the hallway that goes to the end2F2End 
+      },
     ],
   }, 
 
@@ -990,11 +1011,17 @@ export default (locations = {
         {
         width: 50,
         height: 50,
-        yaw: -1.06,
+        yaw: 5,
         pitch: 0.01,
-        goesTo: 'MeditationRoom', 
+        goesTo: 'RightFromLobbyStairs', 
         },
-        
+        {
+          width: 50,
+          height: 50,
+          yaw: 1.5,
+          pitch: 0.01,
+          goesTo: 'MeditationRoom', 
+          },  
       ]
     },
 
@@ -1009,6 +1036,13 @@ export default (locations = {
         pitch: 0.01,
         goesTo: 'RightFromLobbyStairs', //not sure where this goes to 
         },
+        {
+          width: 50,
+          height: 50,
+          yaw: 2,
+          pitch: 0.01,
+          goesTo: 'MeditationRoom', //not sure where this goes to 
+          },
         
       ]
     },
@@ -1044,7 +1078,7 @@ export default (locations = {
           height: 50,
           yaw: 3.7,
           pitch: 0.01,
-          goesTo: '' //I think it should be RightFromLobbyStairs but i wasn't sure
+          goesTo: 'UpstairsRightRight' //I think it should be RightFromLobbyStairs but i wasn't sure
         },
         {
           width: 50,
@@ -1087,7 +1121,7 @@ export default (locations = {
         {
           width: 50,
           height: 50,
-          yaw: 3.5,
+          yaw: 1,
           pitch: 0.01,
           goesTo: 'LeftSideStairs2F',
         },
@@ -1104,7 +1138,7 @@ export default (locations = {
     // leftSide of the main stairs (from ground floor lobby) 2nd Floor - the ending
     RightSide2FEnd:{
       name: 'Second Floor - Study desks',
-      img: "LeftSideStairs2F2.JPG",
+      img: "RightSide2FEnd.JPG",
       transitions:[
         {
           width: 50,
@@ -1118,7 +1152,7 @@ export default (locations = {
           height: 50,
           yaw: 3.5,
           pitch: 0.01,
-          goesTo: 'RightSide2FEnd2.JPG', 
+          goesTo: 'RightSide2FEnd2', 
         },
       ],
     },
@@ -1127,12 +1161,12 @@ export default (locations = {
     //is this an end to the tour? 
     RightSide2FEnd2:{
       name: 'Second Floor - Study desks',
-      img: "LeftSideStairs2F2.JPG",
+      img: "RightSide2FEnd2.JPG",
       transitions:[
         {
           width: 50,
           height: 50,
-          yaw: -6,
+          yaw: 2,
           pitch: 0.01,
           goesTo: 'RightSide2FEnd',
           text: "beautiful view of Middlebury's mountains"
