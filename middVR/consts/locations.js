@@ -174,6 +174,7 @@ export default (locations = {
       ],
     },
 
+    //in my current status the tranisitions aren't right
   DownLobbyLeft: {
       name: 'Down Lobby Left',
       img: 'DownLobbyLeft.JPG',
@@ -190,7 +191,8 @@ export default (locations = {
           height: 50,
           yaw: 5,
           pitch: 0.01,
-          goesTo: 'LobbyRightIn', //go the other side 
+          //this shouldn't be DownLobbyLeft? 
+          goesTo: 'LobbyRightIn', //go to printers  
         },
         {
           width: 50,
@@ -198,6 +200,27 @@ export default (locations = {
           yaw: 0,
           pitch: 0.01,
           goesTo: 'FromLobbyLeft',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 0,
+          pitch: 0.01,
+          goesTo: 'F1ViewingRoom',
+        },
+      ],
+    },
+    
+    F1ViewingRoom:{
+      name: "Viewing Room",
+      img: "F1ViewingRoom.JPG",
+      transitions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: 2,
+          pitch: 0.01,
+          goesTo: 'DownLobbyLeft',
         },
       ],
     },
@@ -1614,7 +1637,38 @@ export default (locations = {
     F0Lounge:{
       name: 'Study Lounge - Downstairs',
       img: "F0Lounge.JPG",
+      tooltips: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 1.4,
+          pitch: 0.01,
+          text: 'Click to enter one of the study rooms. They can be reserved for individual or group study sessions.',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 2.5,
+          pitch: 0.01,
+          text: 'Click to explore more shelves. This way also leads to an exit.',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.5,
+          pitch: 0.01,
+          text: 'More shelves!--Italian Literature, etc.',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 4.5,
+          pitch: 0.01,
+          text: 'More shelves--poetry and more literature',
+        },
+      ],
       transitions:[
+        //across from outside special collections
         {
           width: 50,
           height: 50,
@@ -1622,6 +1676,7 @@ export default (locations = {
           pitch: 0.01,
           goesTo: 'F0OutsideSC' 
         },
+        //back to right outside special collections
         {
           width: 50,
           height: 50,
@@ -1629,28 +1684,186 @@ export default (locations = {
           pitch: 0.01,
           goesTo: 'OutsideSC' 
         },
-        {
-          width: 50,
-          height: 50,
-          yaw: 3.5,
-          pitch: 0.01,
-          goesTo: 'F0150A' 
-        },
-      ],
-    },
-
-    F0150A:{
-      name: "Study Rooms",
-      img: "F0150A.JPG",
-      tooltips: [
+        //study room
         {
           width: 50,
           height: 50,
           yaw: 1,
           pitch: 0.01,
-          text: 'Click to enter one of the study rooms. They can be reserved for individual or group study sessions.',
+          goesTo: 'F0150A' 
+        },
+
+        //leads to an exit
+        {
+          width: 50,
+          height: 50,
+          yaw: 2.8,
+          pitch: 0.01,
+          goesTo: 'F0LeftMostHall' 
+        },
+
+        //Italian literature
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.8,
+          pitch: 0.01,
+          goesTo: 'F0AdjLeft' 
+        },
+
+        //poetry and literature
+        {
+          width: 50,
+          height: 50,
+          yaw: 4.8,
+          pitch: 0.01,
+          goesTo: 'F0AdjRight' 
         },
       ],
+    },
+
+
+    F0AdjLeft:{
+      name: "Adjecent Left Side shelves",
+      img: "F0AdjLeft.JPG",
+      tooltips:[
+        {
+          width: 50,
+          height: 50,
+          yaw: 4.2,
+          pitch: 0.01,
+          text: 'More shelves--poetry and more literature',
+        },
+    ],
+      tranistions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: 1,
+          pitch: 0.01,
+          goesTo: 'F0Lounge' 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 4,
+          pitch: 0.01,
+          goesTo: 'F0AdjRight' 
+        },
+      ],
+    },
+
+
+    F0AdjRight:{
+      name: "Right side shelves",
+      img: "F0AdjRight.JPG",
+      tooltips: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 2.5,
+          pitch: 0.01,
+          text: 'More shelves--poetry and literature',
+        },
+      ],
+      tranistions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: 4,
+          pitch: 0.01,
+          goesTo: 'F0AdjLeft' 
+        },
+        {
+
+        },
+      ],
+    },
+
+
+    F0LeftMostHall:{
+      name: "Bottom Floor shelves",
+      img: "F0LeftMostHall",
+      tranistions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: -2,
+          pitch: 0.01,
+          goesTo: 'F0Lounge' 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 1,
+          pitch: 0.01,
+          goesTo: 'F0LeftMostHall2' 
+        },
+      ],
+    },
+
+    F0LeftMostHall2:{
+      name: "Shelves Hallway 2",
+      img: "F0LeftMostHall2.JPG",
+      transitions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: -1,
+          pitch: 0.01,
+          goesTo: 'F0LeftMostHall' 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 2.5,
+          pitch: 0.01,
+          goesTo: 'F0LeftMostHall3' 
+        },
+      ],
+    },
+
+
+    F0LeftMostHall3:{
+      name: "Shelves Hallway 3",
+      img: "F0LeftMostHall3.JPG",
+      transitions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: -2,
+          pitch: 0.01,
+          goesTo: 'F0LeftMostHall2' 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 3,
+          pitch: 0.01,
+          goesTo: 'F0LeftMostEnd' 
+        },
+      ],
+    },
+
+
+    F0LeftMostEnd:{
+      name: "Exit - first floor",
+      img: "F0LeftMostEnd.JPG",
+      tranistions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: -1,
+          pitch: 0.01,
+          goesTo: 'F0LeftMostHall3' 
+        },
+      ],
+    },
+
+    //study room in the first floor
+    F0150A:{
+      name: "Study Rooms",
+      img: "F0150A.JPG",
       transitions:[
         {
           width: 50,
@@ -1661,5 +1874,4 @@ export default (locations = {
         },
       ],
     },
-
   });
