@@ -1356,7 +1356,7 @@ export default (locations = {
           height: 50,
           yaw: 3.5,
           pitch: 0.01,
-          goesTo: '' //should go back upstairs but don't know if there is an image before helpdesk
+          goesTo: 'HelpDesk' //should go back upstairs but don't know if there is an image before helpdesk
         },
       ],
     },
