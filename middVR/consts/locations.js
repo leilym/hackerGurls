@@ -41,14 +41,14 @@ export default (locations = {
         {
           width: 50,
           height: 50,
-          yaw: 6.6,
+          yaw: 6.4,
           pitch: 0.01,
           goesTo: 'DavisLobby',
         },
         {
           width: 50,
           height: 50,
-          yaw:-3.3,
+          yaw:-3.4,
           pitch: 0.01,
           goesTo: 'Outside',
         },
@@ -69,7 +69,7 @@ export default (locations = {
         {
           width: 50,
           height: 50,
-          yaw: 0.8,
+          yaw: 0.7,
           pitch: 0.01,
           goesTo: 'DavisDoor',
         },
@@ -78,7 +78,7 @@ export default (locations = {
         {
           width: 50,
           height: 50,
-          yaw: 10,
+          yaw: 9.9,
           pitch: 0.01,
           text: 'Welcome to Wilson Cafe! This is a 24/7 study space with weekday retail coffee and bagel offerings',
 
@@ -95,7 +95,7 @@ export default (locations = {
           height: 50,
           yaw: 4,
           pitch: 0.01,
-          text: 'This is the circulation where students come to find, check out library materials including books, cameras, and projectors! ',
+          text: 'Students can find and check out library materials including books, cameras, and projectors! ',
 
         },
         {
@@ -174,23 +174,23 @@ export default (locations = {
         {
           width: 50,
           height: 50,
-          yaw: 3.1,
+          yaw: 3.2,
           pitch: 0.01,
-          goesTo: 'DownDownLobbyLeft', // go to upstairs
+          goesTo: 'DownDownLobbyLeft', 
         },
         {
           width: 50,
           height: 50,
-          yaw: 5.4,
+          yaw: 5,
           pitch: 0.01,
-          goesTo: 'DownLobbyLeft', //go to printers 
+          goesTo: 'LobbyRightIn', //go the other side 
         },
         {
           width: 50,
           height: 50,
           yaw: 0,
           pitch: 0.01,
-          goesTo: 'LobbyRightIn',
+          goesTo: 'FromLobbyLeft',
         },
       ],
     },
@@ -204,35 +204,14 @@ export default (locations = {
           height: 50,
           yaw: 0,
           pitch: 0.01,
-          goesTo: 'BackHallway', // go to upstairs
+          goesTo: 'DownLobbyLeft', // go to upstairs
         },
         {
           width: 50,
           height: 50,
-          yaw: 5.4,
+          yaw: 3.3,
           pitch: 0.01,
-          goesTo: 'PrinterCorridorFirst', //go to printers 
-        },
-      ],
-    },
-
-  BackHallway: {
-      name: 'BackHallway',
-      img: 'BackHallway.JPG',
-      transitions: [
-        {
-          width: 50,
-          height: 50,
-          yaw: 0,
-          pitch: 0.01,
-          goesTo: 'CTLR', // go to upstairs
-        },
-        {
-          width: 50,
-          height: 50,
-          yaw: 5.4,
-          pitch: 0.01,
-          goesTo: 'DownDownLobbyLeft', //go to printers 
+          goesTo: 'BackHallway', //go to printers 
         },
       ],
     },
@@ -344,9 +323,9 @@ export default (locations = {
         {
           width: 50,
           height: 50,
-          yaw: -1.2,
+          yaw: -1,
           pitch: 0.01,
-          goesTo: '',//go to elevator
+          goesTo: 'FirstFloorLeftCornerElevator',//go to elevator
         },
         {
           width: 50,
@@ -361,6 +340,27 @@ export default (locations = {
           yaw: 9,
           pitch: 0.01,
           goesTo: 'DownPrinterCorner', 
+        },
+      ],
+    },
+
+    FirstFloorLeftCornerElevator: {
+      name: 'FirstFloorLeftCornerElevator',
+      img: 'FirstFloorLeftCornerElevator.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: -0.7,
+          pitch: 0.01,
+          goesTo: 'LeftSideStairs2F2',//go to elevator
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: -0.7,
+          pitch: -0.2,
+          goesTo: 'FirstFloorLeftCorner',
         },
       ],
     },
@@ -380,16 +380,30 @@ export default (locations = {
         {
           width: 50,
           height: 50,
-          yaw: 9.9,
+          yaw: 6.3,
+          pitch: 0.01,
+          goesTo: 'DownDownLobbyLeft',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 10,
           pitch: 0.01,
           goesTo: 'CTLR'//CTLR, 
         },
         {
           width: 50,
           height: 50,
-          yaw: 7.75,
+          yaw: 5.1,
           pitch: 0.01,
-          goesTo: ''//take the stairs up
+          goesTo: 'LeftOfOutsideWilson'//CTLR, 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 7.8,
+          pitch: 0.01,
+          goesTo: 'StairsUpCTLRLeft'//take the stairs up
         },
       ],
     },
@@ -875,6 +889,13 @@ export default (locations = {
           pitch: 0.01,
           goesTo: 'CTLR',
         },
+        {
+          width: 50,
+          height: 50,
+          yaw: 0.5,
+          pitch: 0.01,
+          goesTo: 'CTLRRight',
+        },
       ],
     },
 
@@ -932,14 +953,14 @@ export default (locations = {
           height: 50,
           yaw: 7.8,
           pitch: 0.01,
-          text: 'This is a space for students interested in ',
+          text: 'This is a space for students interested in Animation, both 2D and 3D! ',
         },
       ],
       transitions: [
         {
           width: 50,
           height: 50,
-          yaw: 3.5,
+          yaw: 6.85,
           pitch: 0.01,
           goesTo: 'OutsideAnimationStudio',
         },
@@ -949,20 +970,11 @@ export default (locations = {
   OutsideAnimationStudio: {
       name: 'Outside Animation Studio',
       img: 'AnimationOutside.JPG',
-      tooltips: [
-        {
-        width: 50,
-        height: 50,
-        yaw: 7.8,
-        pitch: 0.01,
-        text: 'This is a hallway exiting the Animation Studio',
-        },
-      ],
       transitions: [
         {
           width: 50,
           height: 50,
-          yaw: 3.5,
+          yaw: 3.8,
           pitch: 0.01,
           goesTo: 'AnimationStudio', //not sure where this goes to 
         },
@@ -976,7 +988,7 @@ export default (locations = {
         {
           width: 50,
           height: 50,
-          yaw: 9,
+          yaw: 9.4,
           pitch: 0.01,
           goesTo: 'BehindAnimation', //not sure where this goes to 
         },
@@ -990,20 +1002,105 @@ export default (locations = {
         {
           width: 50,
           height: 50,
-          yaw: 3.5,
+          yaw: 2.8,
           pitch: 0.01,
-          goesTo: 'AnimationStudio', //not sure where this goes to 
+          //roll: 5,
+          goesTo: 'CTLRRight', //not sure where this goes to 
         },
         {
           width: 50,
           height: 50,
-          yaw: 1,
+          yaw: -0.25,
           pitch: 0.01,
-          goesTo: '',  //this was CTLRRight
+          goesTo: 'OutsideAnimationStudio',  //this was CTLRRight
         },
       ],
     },
+    StairsUpCTLRLeft: {
+      name: 'StairsUpCTLRLeft',
+      img: 'StairsUpCTLRLeft.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 2.8,
+          pitch: 0.01,
+          //roll: 5,
+          goesTo: 'CTLRRight', //not sure where this goes to 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: -0.25,
+          pitch: 0.01,
+          goesTo: 'LeftSideStairs2F2',  //this was CTLRRight
+        },
+      ],
+    },
+
+    CTLRRight: {
+      name: 'CTLR Right',
+      img: 'CTLRRight.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.45,
+          pitch: 0.01,
+          goesTo: 'CTLR', 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 2.6,
+          pitch: 0.01,
+          goesTo: 'LeftOfOutsideWilson', //goes to the other side back hallway 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 1.7,
+          pitch: 0.01,
+          goesTo: 'OutsideWilson', 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 0,
+          pitch: 0.01,
+          goesTo: '', //goes upstairs 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: -0.95,
+          pitch: 0.01,
+          goesTo: 'BehindAnimation', //goes upstairs 
+        },
+      ],
+    },    
     
+    LeftOfOutsideWilson: {
+      name: 'LeftOfOutsideWilson',
+      img: 'LeftOfOutsideWilson.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 0,
+          pitch: 0.01,
+          goesTo: 'CTLRRight', 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.1,
+          pitch: 0.01,
+          goesTo: 'BackHallway', //goes to the other side back hallway 
+        },
+      ],
+    },
+
     OutsideMeditationRoom1:{
       name: 'Outside Meditation Room',
       img: "OutsideMedRCurtain.JPG",
