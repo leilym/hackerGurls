@@ -86,7 +86,7 @@ export default (locations = {
       ]
     },
     
-  DavisLobby: {
+    DavisLobby: {
       name: 'Davis Lobby',
       img: 'Lobby.JPG',
       tooltips: [
@@ -129,8 +129,40 @@ export default (locations = {
           pitch: 0.01,
           goesTo: 'FromLobbyLeft',
         },
+        //goes downstairs
+        {
+          width: 50,
+          height: 50,
+          yaw: 0.5,
+          pitch: 0.01,
+          goesTo: 'RightStairsEntranceLobby',
+        },
       ],
     },
+
+    HelpDesk:{
+      name: 'IT HelpDesk',
+      img: 'HelpDesk.JPG',
+      tooltips: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 2,
+          pitch: 0.01,
+          text: 'Students, Faculty and Staff can resolve their technological issues in-person or over Zoom at HelpDesk. ',
+        },
+      ],
+      transitions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.5,
+          pitch: 0.01,
+          goesTo: 'FromEntranceRight',
+        },
+      ],
+    },
+   
    
   FromLobbyLeft: {
       name: 'From Lobby Left',
@@ -463,6 +495,13 @@ export default (locations = {
           yaw: 4.1,
           pitch: 0.01,
           goesTo: 'DavisLobby',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 1.3,
+          pitch: 0.01,
+          goesTo: 'HelpDesk',
         },
       ],
     },
@@ -1277,5 +1316,231 @@ export default (locations = {
         // },
       ],
     },
+
+    RightStairsEntranceLobby:{
+      name: 'Stairs to Downstairs and Special Collection Entrance ',
+      img: "RightStairsEntranceLobby.JPG",
+      transitions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: 0.1,
+          pitch: 0.01,
+          goesTo: 'OutsideSC',
+        },
+        //goes back upstairs
+        {
+          width: 50,
+          height: 50,
+          yaw: 2,
+          pitch: 0.01,
+          goesTo: 'DavisLobby',
+        },
+      ],
+    },
+
+    //helpdesk to downstairs - haven't connected helpdesk to it though
+    StairsDownFromHelpdesk:{
+      name: 'Stairs to Downstairs',
+      img: "StairsDownFromHelpdesk.JPG",
+      transitions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: 1,
+          pitch: 0.01,
+          goesTo: 'F0OutsideSC'
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.5,
+          pitch: 0.01,
+          goesTo: '' //should go back upstairs but don't know if there is an image before helpdesk
+        },
+      ],
+    },
+
+    F0OutsideSC:{
+      name: 'Stairs to Downstairs',
+      img: "F0OutsideSC.JPG",
+      transitions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: -2,
+          pitch: 0.01,
+          goesTo: 'StairsDownFromHelpdesk' 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: -2,
+          pitch: 0.01,
+          goesTo: 'F0Lounge' 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: -2,
+          pitch: 0.01,
+          goesTo: 'OutsideSC' 
+        },
+      ],
+    },
+
+    OutsideSC:{
+      name: 'Special Collections Entrance',
+      img: "OutsideSC.JPG",
+      tooltips: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 6,
+          pitch: 0.01,
+          text: 'Middlebury College Special Collections houses the college’s rare book, manuscript, and archival collections.',
+        },
+      ],
+
+      transitions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: -4,
+          pitch: 0.01,
+          goesTo: 'F0OutsideSC' 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 2,
+          pitch: 0.01,
+          goesTo: 'F0Lounge' 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: -3,
+          pitch: 0.01,
+          goesTo: 'SpecialCollection1' 
+        },
+      ],
+    },
+
+    SpecialCollection1:{
+      name: 'Special Collection #1',
+      img: "SpecialCollection1.JPG",
+      tooltips: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 6,
+          pitch: 0.01,
+          text: 'There are collections of 80 zines, 46 tiny books, and 1 stuffed poodles.',
+        },
+      ],
+        transitions:[
+          {
+            width: 50,
+            height: 50,
+            yaw: 1,
+            pitch: 0.01,
+            goesTo: 'OutsideSC' 
+          },
+          {
+            width: 50,
+            height: 50,
+            yaw: 3.5,
+            pitch: 0.01,
+            goesTo: 'SpecialCollection2' 
+          },
+        ],
+    },
+    SpecialCollection2:{
+      name: 'Special Collection #2',
+      img: "SpecialCollection2.JPG",
+      tranistions:[
+        {
+          width: 50,
+            height: 50,
+            yaw: 3.5,
+            pitch: 0.01,
+            goesTo: 'SpecialCollection1'
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 1,
+          pitch: 0.01,
+          goesTo: 'SpecialCollection3'
+        }
+      ],
+    },
+
+    SpecialCollection3:{
+      name: "Special Collections #3",
+      img: "SpecialCollection3.JPG",
+      tranistions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: 1,
+          pitch: 0.01,
+          goesTo: 'SpecialCollection2'
+        },
+      ],
+    },
+
+    F0Lounge:{
+      name: 'Study Lounge - Downstairs',
+      img: "F0Lounge.JPG",
+      transitions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: -1,
+          pitch: 0.01,
+          goesTo: 'F0OutsideSC' 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: -2,
+          pitch: 0.01,
+          goesTo: 'OutsideSC' 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.5,
+          pitch: 0.01,
+          goesTo: 'F0150A' 
+        },
+      ],
+    },
+
+    F0150A:{
+      name: "Study Rooms",
+      img: "F0150A.JPG",
+      tooltips: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 1,
+          pitch: 0.01,
+          text: 'Click to enter one of the study rooms. They can be reserved for individual or group study sessions.',
+        },
+      ],
+      transitions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: -1,
+          pitch: 0.01,
+          goesTo: 'F0Lounge' 
+        },
+      ],
+    },
+
 
   });
