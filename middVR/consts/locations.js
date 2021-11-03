@@ -199,6 +199,7 @@ export default (locations = {
       ],
     },
 
+    //in my current status the tranisitions aren't right
   DownLobbyLeft: {
       name: 'Down Lobby Left',
       img: 'DownLobbyLeft.JPG',
@@ -215,7 +216,8 @@ export default (locations = {
           height: 50,
           yaw: 5.4,
           pitch: 0.01,
-          goesTo: 'DownLobbyLeft', //go to printers 
+          //this shouldn't be DownLobbyLeft? 
+          goesTo: 'DownLobbyLeft', //go to printers  
         },
         {
           width: 50,
@@ -223,6 +225,27 @@ export default (locations = {
           yaw: 0,
           pitch: 0.01,
           goesTo: 'LobbyRightIn',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 0,
+          pitch: 0.01,
+          goesTo: 'F1ViewingRoom',
+        },
+      ],
+    },
+    
+    F1ViewingRoom:{
+      name: "Viewing Room",
+      img: "F1ViewingRoom.JPG",
+      transitions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: 2,
+          pitch: 0.01,
+          goesTo: 'DownLobbyLeft',
         },
       ],
     },
@@ -1562,7 +1585,6 @@ export default (locations = {
       ],
     },
 
-
     F0LeftMostHall2:{
       name: "Shelves Hallway 2",
       img: "F0LeftMostHall2.JPG",
@@ -1635,6 +1657,4 @@ export default (locations = {
         },
       ],
     },
-
-
   });
