@@ -204,7 +204,7 @@ export default (locations = {
         {
           width: 50,
           height: 50,
-          yaw: 0,
+          yaw: 0.6,
           pitch: 0.01,
           goesTo: 'F1ViewingRoom',
         },
@@ -218,7 +218,7 @@ export default (locations = {
         {
           width: 50,
           height: 50,
-          yaw: 2,
+          yaw: 1.6,
           pitch: 0.01,
           goesTo: 'DownLobbyLeft',
         },
@@ -615,21 +615,21 @@ export default (locations = {
         {
           width: 50,
           height: 50,
-          yaw: 4.3,
+          yaw: 1.3,
           pitch: 0.01,
           goesTo: 'UpstairsLobby', //keep going up
         },
         {
           width: 50,
           height: 50,
-          yaw: 0.75,
+          yaw: 5,
           pitch: 0.01,
           goesTo: 'UpstairsRightRight', 
         },
         {
           width: 50,
           height: 50,
-          yaw: 2.3,
+          yaw:3.3,
           pitch: 0.01,
           goesTo: 'OutsideMeditationRoom2', 
         },
@@ -1151,16 +1151,9 @@ export default (locations = {
       img: "OutsideMedRCurtain.JPG",
       transitions:[
         {
-        width: 50,
-        height: 50,
-        yaw: 5,
-        pitch: 0.01,
-        goesTo: 'RightFromLobbyStairs', 
-        },
-        {
           width: 50,
           height: 50,
-          yaw: 1.5,
+          yaw: 3.3,
           pitch: 0.01,
           goesTo: 'MeditationRoom', 
           },  
@@ -1174,14 +1167,14 @@ export default (locations = {
         {
         width: 50,
         height: 50,
-        yaw: 1,
+        yaw: -0.3,
         pitch: 0.01,
         goesTo: 'RightFromLobbyStairs', //not sure where this goes to 
         },
         {
           width: 50,
           height: 50,
-          yaw: 2,
+          yaw: 3.5,
           pitch: 0.01,
           goesTo: 'MeditationRoom', //not sure where this goes to 
           },
@@ -1204,7 +1197,7 @@ export default (locations = {
         {
           width: 50,
           height: 50,
-          yaw: -1.5,
+          yaw: -1.8,
           pitch: 0.01,
           goesTo: 'OutsideMeditationRoom2', 
         },
@@ -1406,7 +1399,7 @@ export default (locations = {
         {
           width: 50,
           height: 50,
-          yaw: 4,
+          yaw: 4.7,
           pitch: 0.01,
           goesTo: 'RightHallWayMiddle',
         },
@@ -1511,14 +1504,14 @@ export default (locations = {
         {
           width: 50,
           height: 50,
-          yaw: -2,
+          yaw: -5,
           pitch: 0.01,
           goesTo: 'StairsDownFromHelpdesk' 
         },
         {
           width: 50,
           height: 50,
-          yaw: -2,
+          yaw: -4,
           pitch: 0.01,
           goesTo: 'F0Lounge' 
         },
@@ -1528,6 +1521,13 @@ export default (locations = {
           yaw: -2,
           pitch: 0.01,
           goesTo: 'OutsideSC' 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: -3,
+          pitch: 0.01,
+          goesTo: 'RightStairsEntranceLobby' 
         },
       ],
     },
@@ -1539,7 +1539,7 @@ export default (locations = {
         {
           width: 50,
           height: 50,
-          yaw: 6,
+          yaw: -3.5,
           pitch: 0.01,
           text: 'Middlebury College Special Collections houses the college’s rare book, manuscript, and archival collections.',
         },
@@ -1549,14 +1549,14 @@ export default (locations = {
         {
           width: 50,
           height: 50,
-          yaw: -4,
+          yaw: -4.4,
           pitch: 0.01,
           goesTo: 'F0OutsideSC' 
         },
         {
           width: 50,
           height: 50,
-          yaw: 2,
+          yaw: 6,
           pitch: 0.01,
           goesTo: 'F0Lounge' 
         },
@@ -1566,6 +1566,13 @@ export default (locations = {
           yaw: -3,
           pitch: 0.01,
           goesTo: 'SpecialCollection1' 
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: -1.5,
+          pitch: 0.01,
+          goesTo: 'RightStairsEntranceLobby' 
         },
       ],
     },
