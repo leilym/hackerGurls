@@ -20,7 +20,7 @@ export class TooltipModule extends Module {
       this.surfaces.push (
         new Surface (item.width, item.height, Surface.SurfaceShape.Flat)
       );
-      this.surfaces[index].setAngle (item.yaw, item.pitch);
+      this.surfaces[index].setAngle (item.yaw, item.pitch, item.roll); // roll not working 
       this.roots.push (
         r360.renderToSurface (
           r360.createRoot ('TooltipComponent', {
