@@ -120,6 +120,7 @@ export default (locations = {
           height: 50,
           yaw: 2.35,
           pitch: -0.3,
+          roll: 3,
           goesTo: 'RightStairsEntranceLobby',
         },
         {
@@ -993,8 +994,7 @@ export default (locations = {
         },
       ],
     },
-
-    
+   
   AnimationStudio: {
       name: 'Animation Studio',
       img: 'AnimationStudio.JPG',
@@ -1622,14 +1622,14 @@ export default (locations = {
           {
             width: 50,
             height: 50,
-            yaw: 1,
+            yaw: -0.5,
             pitch: 0.01,
             goesTo: 'OutsideSC' 
           },
           {
             width: 50,
             height: 50,
-            yaw: 3.5,
+            yaw: 1.9,
             pitch: 0.01,
             goesTo: 'SpecialCollection2' 
           },
@@ -1638,18 +1638,18 @@ export default (locations = {
     SpecialCollection2:{
       name: 'Special Collection #2',
       img: "SpecialCollection2.JPG",
-      tranistions:[
+      transitions:[
         {
           width: 50,
             height: 50,
-            yaw: 3.5,
+            yaw: 2,
             pitch: 0.01,
             goesTo: 'SpecialCollection1'
         },
         {
           width: 50,
           height: 50,
-          yaw: 1,
+          yaw: 3,
           pitch: 0.01,
           goesTo: 'SpecialCollection3'
         }
@@ -1659,13 +1659,20 @@ export default (locations = {
     SpecialCollection3:{
       name: "Special Collections #3",
       img: "SpecialCollection3.JPG",
-      tranistions:[
+      transitions:[
         {
           width: 50,
           height: 50,
-          yaw: 1,
+          yaw: 5,
           pitch: 0.01,
           goesTo: 'SpecialCollection2'
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 0.7,
+          pitch: 0.01,
+          goesTo: 'OutsideSC'
         },
       ],
     },
@@ -1771,7 +1778,7 @@ export default (locations = {
           text: 'More shelves--poetry and more literature',
         },
     ],
-      tranistions:[
+      transitions:[
         {
           width: 50,
           height: 50,
@@ -1802,7 +1809,7 @@ export default (locations = {
           text: 'More shelves--poetry and literature',
         },
       ],
-      tranistions:[
+      transitions:[
         {
           width: 50,
           height: 50,
@@ -1820,7 +1827,7 @@ export default (locations = {
     F0LeftMostHall:{
       name: "Bottom Floor shelves",
       img: "F0LeftMostHall",
-      tranistions:[
+      transitions:[
         {
           width: 50,
           height: 50,
@@ -1885,7 +1892,7 @@ export default (locations = {
     F0LeftMostEnd:{
       name: "Exit - first floor",
       img: "F0LeftMostEnd.JPG",
-      tranistions:[
+      transitions:[
         {
           width: 50,
           height: 50,
