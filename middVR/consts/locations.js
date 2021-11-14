@@ -483,6 +483,13 @@ export default (locations = {
         {
           width: 50,
           height: 50,
+          yaw: 1.7,
+          pitch: 0.01,
+          goesTo: 'HelpDesk', //needs to go upstairs from help desk
+        },
+        {
+          width: 50,
+          height: 50,
           yaw: 0.2,
           pitch: 0.01,
           goesTo: 'LobbyRightIn',
@@ -1493,6 +1500,28 @@ export default (locations = {
           yaw: 5,
           pitch: 0.05,
           goesTo: 'HelpDesk' //should go back upstairs but don't know if there is an image before helpdesk
+        },
+      ],
+    },
+
+    //helpdesk
+    HelpDesk:{
+      name:'ITS HelpDesk',
+      img: "HelpDesk.JPG",
+      tranistions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: 2,
+          pitch: 0.05,
+          goesTo: 'StairsDownFromHelpdesk'
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 4.3,
+          pitch: 0.05,
+          goesTo: 'FromEntranceRight'
         },
       ],
     },
