@@ -1777,7 +1777,7 @@ export default (locations = {
           pitch: 0.01,
           text: 'More shelves--poetry and more literature',
         },
-    ],
+      ],
       transitions:[
         {
           width: 50,
@@ -1826,7 +1826,7 @@ export default (locations = {
 
     F0LeftMostHall:{
       name: "Bottom Floor shelves",
-      img: "F0LeftMostHall",
+      img: "F0LeftMostHall.JPG",
       transitions:[
         {
           width: 50,
