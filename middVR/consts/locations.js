@@ -1508,7 +1508,7 @@ export default (locations = {
     HelpDesk:{
       name:'ITS HelpDesk',
       img: "HelpDesk.JPG",
-      tranistions:[
+      transitions:[
         {
           width: 50,
           height: 50,
