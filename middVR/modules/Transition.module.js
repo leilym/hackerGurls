@@ -21,7 +21,7 @@ export class TransitionModule extends Module {
         item.height,
         Surface.SurfaceShape.Flat
       );
-      surface.setAngle (item.yaw, item.pitch);
+      surface.setAngle (item.yaw, item.pitch, item.roll);
       this.roots.push (
         r360.renderToSurface (
           r360.createRoot ('TransitionComponent', {

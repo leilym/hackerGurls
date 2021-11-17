@@ -16,6 +16,29 @@ export default (locations = {
       },
     ],
   },
+
+  LandingPage: {
+    name: 'LandingPage',
+    img: 'AthleticField.jpg',
+    tooltips: [
+      {
+        width: 50,
+        height: 50,
+        yaw: 6.8,
+        pitch: 0.01,
+        text: 'Welcome to Davis Library! This is the largest library at Middlebury',
+      },
+    ],
+    transitions: [
+      {
+        width: 50,
+        height: 50,
+        yaw: 9.55,
+        pitch: 0.01,
+        goesTo: 'DavisDoor',
+      },
+    ],
+  },
     
   DavisDoor: {
       name: 'DavisDoor',
@@ -57,6 +80,7 @@ export default (locations = {
           height: 50,
           yaw: 1.7,
           pitch: 0.01,
+          roll: 1,
           goesTo: 'WilsonCafe',
         },
       ],
