@@ -1,4 +1,6 @@
 import locations from '../consts/locations';
+import davis from '../consts/davis';
+
 
 export function getListTooltips (location) {
   if (
@@ -23,3 +25,31 @@ export function getListTransitions (location) {
   }
   return [];
 }
+
+
+
+////////////
+
+export function getListTooltipsDavis (da) {
+    if (
+      davis[`${da}`] &&
+      davis[`${da}`].tooltips &&
+      davis[`${da}`].tooltips.length &&
+      davis[`${da}`].tooltips.length > 0
+    ) {
+      return davis[`${da}`].tooltips;
+    }
+    return [];
+  }
+  
+  export function getListTransitionsDavis (da) {
+    if (
+      davis[`${da}`] &&
+      davis[`${da}`].transitions &&
+      davis[`${da}`].transitions.length &&
+      davis[`${da}`].transitions.length > 0
+    ) {
+      return davis[`${da}`].transitions;
+    }
+    return [];
+  }
