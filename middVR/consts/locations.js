@@ -484,6 +484,13 @@ export default (locations = {
         {
           width: 50,
           height: 50,
+          yaw: 1.7,
+          pitch: 0.01,
+          goesTo: 'HelpDesk', //needs to go upstairs from help desk
+        },
+        {
+          width: 50,
+          height: 50,
           yaw: 0.2,
           pitch: 0.01,
           goesTo: 'LobbyRightIn',
@@ -1497,6 +1504,28 @@ export default (locations = {
       ],
     },
 
+    //helpdesk
+    HelpDesk:{
+      name:'ITS HelpDesk',
+      img: "HelpDesk.JPG",
+      transitions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: 2,
+          pitch: 0.05,
+          goesTo: 'StairsDownFromHelpdesk'
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 4.3,
+          pitch: 0.05,
+          goesTo: 'FromEntranceRight'
+        },
+      ],
+    },
+
     F0OutsideSC:{
       name: 'Stairs to Downstairs',
       img: "F0OutsideSC.JPG",
@@ -1748,7 +1777,7 @@ export default (locations = {
           pitch: 0.01,
           text: 'More shelves--poetry and more literature',
         },
-    ],
+      ],
       transitions:[
         {
           width: 50,
@@ -1797,7 +1826,7 @@ export default (locations = {
 
     F0LeftMostHall:{
       name: "Bottom Floor shelves",
-      img: "F0LeftMostHall",
+      img: "F0LeftMostHall.JPG",
       transitions:[
         {
           width: 50,
