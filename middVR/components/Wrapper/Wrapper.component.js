@@ -3,7 +3,7 @@ import { asset, Environment } from "react-360";
 
 import locations from "../../consts/locations";
 
-const locationName = locations.DavisDoor.name;
+const locationName = locations.LandingPage.name; 
 const wrappers = [];
 
 export function changeLocation(location) {

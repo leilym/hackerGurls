@@ -3,6 +3,8 @@
 export default (locations = {
 
 //Below are Davis Maps 
+
+
   Outside: {
     name: 'Outside',
     img: 'Outside.JPG',
@@ -19,14 +21,28 @@ export default (locations = {
 
   LandingPage: {
     name: 'LandingPage',
-    img: 'AthleticField.jpg',
+    img: 'LandingPage.JPG',
     tooltips: [
       {
         width: 50,
         height: 50,
-        yaw: 6.8,
-        pitch: 0.01,
-        text: 'Welcome to Davis Library! This is the largest library at Middlebury',
+        yaw: 9.55,
+        pitch: 0.2,
+        text: 'Click to enter the Davis Family Library',
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: 8,
+        pitch: 0.2,
+        text: 'Click to enter the Axinn Center at Starr Library',
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: 11,
+        pitch: 0.2,
+        text: 'Click to enter McCoullough Student Building',
       },
     ],
     transitions: [
@@ -36,6 +52,20 @@ export default (locations = {
         yaw: 9.55,
         pitch: 0.01,
         goesTo: 'DavisDoor',
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: 8,
+        pitch: 0.01,
+        goesTo: 'Axinn', //Axinn door or something 
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: 11,
+        pitch: 0.01,
+        goesTo: 'MCC', //Mccor something 
       },
     ],
   },

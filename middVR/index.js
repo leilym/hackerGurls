@@ -65,7 +65,7 @@ export default class MainComponent extends React.Component {
       <View style={styles.panel}>
         <View style={styles.greetingBox}>
           <Text style={styles.greeting}>
-            Welcome to Middlebur College! Spin around to begin your tour!
+            Welcome to Middlebury College! Spin around to begin your tour!
           </Text>
         </View>
       </View>
