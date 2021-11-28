@@ -2016,6 +2016,14 @@ export default (locations = {
           pitch: 0.17,
           text: 'Click to enter Crossroads Cafe',
         },
+
+        {
+          width: 50,
+          height: 50,
+          yaw: 0.5,
+          pitch: 0.17,
+          text: 'Click to go towards mail Center',
+        },
       ],
 
       transitions: [
@@ -2035,20 +2043,20 @@ export default (locations = {
             pitch: 0.01,
             goesTo: 'mccCR2',
           },
-          // {
-          //   width: 50,
-          //   height: 50,
-          //   yaw: -3.9,
-          //   pitch: 0.01,
-          //   goesTo: 'mccMainEntrance',
-          // },
-          // {
-          //   width: 50,
-          //   height: 50,
-          //   yaw: 8,
-          //   pitch: 0.01,
-          //   goesTo: 'mccToMailCenter',
-          //   },
+          {
+            width: 50,
+            height: 50,
+            yaw: -3.9,
+            pitch: 0.01,
+            goesTo: 'mccMainEntrance',
+          },
+          {
+            width: 50,
+            height: 50,
+            yaw: 0.5,
+            pitch: 0.01,
+            goesTo: 'mccToMailCenter',
+            },
         ],
   },
 
@@ -2059,7 +2067,7 @@ export default (locations = {
           {
               width: 50,
               height: 50,
-              yaw: 6,
+              yaw: -3.7,
               pitch: 0.01,
               goesTo: 'mccOutsideCR',
           },
@@ -2067,13 +2075,13 @@ export default (locations = {
   },
 
   mccCR2: {
-    name: "center of CrossRoads cafe",
+    name: "Center of CrossRoads cafe",
     img: 'mcc/mccCR2.JPG',
     transitions: [
       {
         width: 50,
         height: 50,
-        yaw: 3,
+        yaw: -2,
         pitch: 0.01,
         goesTo: 'mccOutsideCR',
       },
@@ -2081,7 +2089,7 @@ export default (locations = {
       {
         width: 50,
         height: 50,
-        yaw: 1,
+        yaw: 2,
         pitch: 0.01,
         goesTo: 'mccCR1',
       },
@@ -2089,7 +2097,7 @@ export default (locations = {
       {
         width: 50,
         height: 50,
-        yaw: 2,
+        yaw: 3,
         pitch: 0.01,
         goesTo: 'mccCR3',
       },
@@ -2097,7 +2105,7 @@ export default (locations = {
   },
 
   mccCR3: {
-    name: "Crossroads - pool side",
+    name: "Crossroads - back side",
     img: 'mcc/mccCR3.JPG',
     transitions: [
       {
@@ -2107,9 +2115,44 @@ export default (locations = {
         pitch: 0.01,
         goesTo: 'mccCR2 ',
       },
-    ]
 
-    
+      {
+        width: 50,
+        height: 50,
+        yaw: 3,
+        pitch: 0.01,
+        goesTo: 'mccCR4StudyRoom ',
+      },
+    ],
+  },
+
+  mccCR1: {
+    name: "Crossroads - pool side",
+    img: 'mcc/mccCR1.JPG',
+    transitions: [
+      {
+        width: 50,
+        height: 50,
+        yaw: 2.8,
+        pitch: 0.01,
+        goesTo: 'mccCR2',
+      },
+    ],
+  },
+
+  mccCR4StudyRoom: {
+    name: "CrossRoads - Study room",
+    img: 'mcc/mccCR4StudyRoom.JPG',
+    transitions:[
+      {
+        width: 50,
+        height: 50,
+        yaw: 2.8,
+        pitch: 0.01,
+        goesTo: 'mccCR3',
+      },
+    ]
   }
+  
 });
 
