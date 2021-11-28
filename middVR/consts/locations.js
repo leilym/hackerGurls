@@ -2097,7 +2097,7 @@ export default (locations = {
       {
         width: 50,
         height: 50,
-        yaw: 3,
+        yaw: 3.6,
         pitch: 0.01,
         goesTo: 'mccCR3',
       },
@@ -2111,17 +2111,26 @@ export default (locations = {
       {
         width: 50,
         height: 50,
-        yaw: 3,
+        yaw: -6,
         pitch: 0.01,
-        goesTo: 'mccCR2 ',
+        goesTo: 'mccCR2',
       },
 
       {
         width: 50,
         height: 50,
-        yaw: 3,
+        yaw: 3.4,
         pitch: 0.01,
-        goesTo: 'mccCR4StudyRoom ',
+        goesTo: 'mccCR4StudyRoom',
+      },
+    ],
+    tooltips: [
+      {
+        width: 50,
+        height: 50,
+        yaw: 3.4,
+        pitch: 0.15,
+        text: 'Click to enter the study room',
       },
     ],
   },
@@ -2147,12 +2156,12 @@ export default (locations = {
       {
         width: 50,
         height: 50,
-        yaw: 2.8,
+        yaw: -6,
         pitch: 0.01,
         goesTo: 'mccCR3',
       },
-    ]
-  }
+    ],
+  },
   
 });
 
