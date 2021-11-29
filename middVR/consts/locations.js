@@ -22,6 +22,15 @@ export default (locations = {
   LandingPage: {
     name: 'LandingPage',
     img: 'LandingPage.JPG',
+    backgrounds: [
+      {
+        width: 50,
+        height: 50,
+        yaw: 9.55,
+        pitch: 0.4,
+        text: 'Enter Davis'
+      }
+    ],
     tooltips: [
       {
         width: 50,

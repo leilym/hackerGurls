@@ -3,9 +3,9 @@ import {Surface, Module} from 'react-360-web';
 import * as LocationService from '../services/location.service';
 import {r360} from '../client';
 
-export class TooltipModule extends Module {
+export class BackgroundModule extends Module {
   constructor () {
-    super ('TooltipModule');
+    super ('BackgroundModule');
   }
 
   roots = [];
@@ -14,7 +14,7 @@ export class TooltipModule extends Module {
   setTooltips (location) {
     this.detachAll ();
 
-    const tooltips = LocationService.getListTooltips (location);
+    const tooltips = LocationService.getListBackgrounds (location);
 
     tooltips.map ((item, index) => {
       this.surfaces.push (
@@ -23,10 +23,10 @@ export class TooltipModule extends Module {
       this.surfaces[index].setAngle (item.yaw, item.pitch, item.roll); // roll not working 
       this.roots.push (
         r360.renderToSurface (
-          r360.createRoot ('TooltipComponent', {
+          r360.createRoot ('BackgroundComponent', {
             width: item.width,
             height: item.height,
-            iconImg: 'icons/question.png',
+            iconImg: 'icons/whitebackground.jpeg',
             index: index,
             text: item.text,
             infoImg: item.img,
@@ -47,5 +47,3 @@ export class TooltipModule extends Module {
     }
   }
 }
-
-

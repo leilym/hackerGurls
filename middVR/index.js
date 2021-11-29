@@ -55,11 +55,12 @@ import {AppRegistry, View, NativeModules, Text, StyleSheet} from 'react-360';
 import {wrap} from './components/Wrapper/Wrapper.component';
 import TooltipComponent from './components/Tooltip/Tooltip.component';
 import TransitionComponent from './components/Transition/Transition.component';
-
+import BackgroundComponent from './components/Background/Background.component';
 export default class MainComponent extends React.Component {
   render () {
     NativeModules.TooltipModule.setTooltips (this.props.name);
     NativeModules.TransitionModule.setTooltips (this.props.name);
+    NativeModules.BackgroundModule.setTooltips (this.props.name);
     //return <View />;
     return (
       <View style={styles.panel}>
@@ -97,6 +98,9 @@ const styles = StyleSheet.create({
 
 AppRegistry.registerComponent ('TransitionComponent', () =>
   wrap (TransitionComponent)
+);
+AppRegistry.registerComponent ('BackgroundComponent', () =>
+  wrap (BackgroundComponent)
 );
 AppRegistry.registerComponent ('MainComponent', () => wrap (MainComponent));
 AppRegistry.registerComponent ('TooltipComponent', () =>
