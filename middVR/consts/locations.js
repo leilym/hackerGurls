@@ -65,7 +65,7 @@ export default (locations = {
           height: 50,
           yaw: 11,
           pitch: 0.01,
-          goesTo: 'mccMainEntrance', //Mccor something 
+          goesTo: 'mccOutsideMainEntrance', //Mccor something 
         },
       ],
     },
@@ -1975,6 +1975,20 @@ export default (locations = {
 
     /////////////////////////MCC///////////////////////////////////
 
+    mccOutsideMainEntrance:{
+      name: 'mcc Outside Main Entrance ',
+      img: 'mcc/mccOutsideMainEntrance.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 3.1,
+          pitch: 0.01,
+          goesTo: 'mccMainEntrance',
+        },
+      ],
+    },
+
     mccMainEntrance: {
       name: 'mcc Main Entrance (Inside)',
       img: 'mcc/mccMainEntrance.JPG',
@@ -1985,6 +1999,13 @@ export default (locations = {
           yaw: 0.1,
           pitch: 0.01,
           goesTo: 'mccOutsideCR',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: -3,
+          pitch: 0.01,
+          goesTo: 'mccOutsideMainEntrance',
         },
       ],
       // tooltips: [
@@ -2142,9 +2163,16 @@ export default (locations = {
       {
         width: 50,
         height: 50,
-        yaw: 2.8,
-        pitch: 0.01,
+        yaw: 3.5,
+        pitch: 0.002,
         goesTo: 'mccCR2',
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: 1,
+        pitch: 0.01,
+        goesTo: 'mccGrille3',
       },
     ],
   },
@@ -2162,6 +2190,10 @@ export default (locations = {
       },
     ],
   },
+
+  mccGrille3:{
+    
+  }
   
 });
 
