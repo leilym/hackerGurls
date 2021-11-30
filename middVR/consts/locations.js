@@ -2081,6 +2081,75 @@ export default (locations = {
         ],
   },
 
+  mccToMailCenter:{
+    name: 'hallway to Mail Center',
+    img: 'mcc/mccToMailCenter.JPG',
+
+    tooltips: [
+      {
+        width: 50,
+        height: 50,
+        yaw: 3,
+        pitch: 0.17,
+        text: 'Click to go to Student mail center',
+      },
+    ],
+
+    transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 0.2,
+          pitch: 0.01,
+          goesTo: 'mccOutsideCR',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 3,
+          pitch: 0.01,
+          goesTo: 'mccMailCenter1',
+        },
+        
+      ],
+  },
+
+  mccMailCenter1:{
+      name: 'mcc Mail center ',
+      img: 'mcc/mccMailCenter1.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 4.5,
+          pitch: 0.01,
+          goesTo: 'mccToMailCenter',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 0.4,
+          pitch: 0.01,
+          goesTo: 'mccMailCenter2',
+        },
+      ],
+  },
+
+  mccMailCenter2:{
+    name: 'mcc mail center 2',
+    img: 'mcc/mccMailCenter2.JPG',
+    transitions: [
+      {
+        width: 50,
+        height: 50,
+        yaw: -3.7,
+        pitch: 0.01,
+        goesTo: 'mccMailCenter1',
+    },
+    ],
+
+  },
+
   mccMiddX: {
       name: 'mcc MiddXpress',
       img: 'mcc/mccMiddX.JPG',
