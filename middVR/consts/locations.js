@@ -2192,8 +2192,218 @@ export default (locations = {
   },
 
   mccGrille3:{
-    
-  }
+    name: "Grille - towards stairs to pool",
+    img: 'mcc/mccGrille3.JPG',
+
+    tooltips:[
+      {
+        width: 50,
+        height: 50,
+        yaw: 7,
+        pitch: 0.17,
+        text: 'Click to go back to crossroads cafe',
+      },
+    ],
+
+    transitions:[
+      {
+        width: 50,
+        height: 50,
+        yaw: 7,
+        pitch: 0.01,
+        goesTo: 'mccCR1',
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: 5,
+        pitch: 0.01,
+        goesTo: 'mccGrille2',
+      },
+    ],
+  },
+
+  mccGrille2:{
+    name: "Grille - center",
+    img: 'mcc/mccGrille2.JPG',
+    transitions:[
+      {
+        width: 50,
+        height: 50,
+        yaw: -1,
+        pitch: 0.01,
+        goesTo: 'mccGrille3',
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: -5,
+        pitch: 0.01,
+        goesTo: 'mccGrille1',
+      },
+    ],
+  },
+
+  mccGrille1:{
+    name: "Grille - order",
+    img: 'mcc/mccGrille1.JPG',
+    tooltips:[
+      {
+        width: 50,
+        height: 50,
+        yaw: 5.4,
+        pitch: 0.17,
+        text: 'Students can order Grille food here. Grille is non-taxed!',
+      },
+    ],
+    transitions:[
+      {
+        width: 50,
+        height: 50,
+        yaw: 2.2,
+        pitch: 0.01,
+        goesTo: 'mccGrille2',
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: 6.5,
+        pitch: 0.01,
+        goesTo: 'mccOutsideGrille',
+      },
+    ],
+  },
+
+  mccOutsideGrille:{
+    name: "Grille - order",
+    img: 'mcc/mccOutsideGrille.JPG',
+
+    transitions:[
+      {
+        width: 50,
+        height: 50,
+        yaw: -7.2,
+        pitch: 0.01,
+        goesTo: 'mccGrille1',
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: -3.5,
+        pitch: 0.01,
+        goesTo: 'mccOutsideWilson',
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: -6,
+        pitch: 0.01,
+        goesTo: 'mccOutsideBS',
+      },
+    ],
+  },
+
+  mccOutsideWilson:{
+    name: "Outside Wilson Hall",
+    img: 'mcc/mccOutsideWilson.JPG',
+
+    transitions:[
+      {
+        width: 50,
+        height: 50,
+        yaw: -1.3,
+        pitch: 0.01,
+        goesTo: 'mccOutsideGrille',
+      },
+
+      {
+        width: 50,
+        height: 50,
+        yaw: 0.1,
+        pitch: 0.01,
+        goesTo: 'mccWilson',
+      },
+    ],
+  },
+
+  mccWilson:{
+    name: "Wilson Hall",
+    img: 'mcc/mccWilson.JPG',
+
+    tooltips:[
+      {
+        width: 50,
+        height: 50,
+        yaw: -3,
+        pitch: 0.17,
+        text: 'Students from Tap dance are practicing on stage!',
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: -3.3,
+        pitch: 0.17,
+        text: 'Wilson Hall is used for performances, panels, speakers, etc.!',
+      },
+    ],
+
+    transitions:[
+      {
+        width: 50,
+        height: 50,
+        yaw: -1.5,
+        pitch: 0.01,
+        goesTo: 'mccOutsideWilson',
+      },
+    ],
+  },
+
+  mccOutsideBS:{
+    name: "Outside Wilson Hall",
+    img: 'mcc/mccOutsideBS.JPG',
+
+    transitions:[
+      {
+        width: 50,
+        height: 50,
+        yaw: 0.3,
+        pitch: 0.01,
+        goesTo: 'mccBookStore',
+      },
+
+      {
+        width: 50,
+        height: 50,
+        yaw: 3,
+        pitch: 0.01,
+        goesTo: 'mccOutsideWilson',
+      },
+    ],
+  },
+
+  mccBookStore:{
+    name: "BookStore",
+    img: 'mcc/mccBookStore.JPG',
+
+    tooltips:[
+      {
+        width: 50,
+        height: 50,
+        yaw: 3,
+        pitch: 0.17,
+        text: 'College bookstore sells Middlebury merch and dorm & class supplies!',
+      },
+    ],
+    transitions:[
+      {
+        width: 50,
+        height: 50,
+        yaw: 6.5,
+        pitch: 0.01,
+        goesTo: 'mccOutsideBS',
+      },
+    ],
+  },
   
 });
 
