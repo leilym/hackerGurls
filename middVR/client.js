@@ -39,7 +39,7 @@ function init(bundle, parent, options = {}) {
   });
 
   r360.renderToSurface(r360.createRoot("MainComponent"), r360.getDefaultSurface());
-  r360.compositor.setBackground(r360.getAssetURL("img/LandingPage.JPG"));
+  r360.compositor.setBackground(r360.getAssetURL("img/LandingPageNew.jpg"));
 }
 
 window.React360 = { init };

@@ -123,42 +123,19 @@ export default (locations = {
   
     LandingPage: {
       name: 'LandingPage',
-      img: 'LandingPage.JPG',
-      tooltips: [
-        {
-          width: 50,
-          height: 50,
-          yaw: 9.55,
-          pitch: 0.2,
-          text: 'Click to enter the Davis Family Library',
-        },
-        {
-          width: 50,
-          height: 50,
-          yaw: 8,
-          pitch: 0.2,
-          text: 'Click to enter the Axinn Center at Starr Library', //line 2000
-        },
-        {
-          width: 50,
-          height: 50,
-          yaw: 11,
-          pitch: 0.2,
-          text: 'Click to enter McCoullough Student Building',
-        },
-      ],
+      img: 'LandingPageNew.jpg',
       transitions: [
         {
           width: 50,
           height: 50,
-          yaw: 9.55,
+          yaw: 8.9,
           pitch: 0.01,
           goesTo: 'DavisDoor',
         },
         {
           width: 50,
           height: 50,
-          yaw: 8,
+          yaw: 7.8,
           pitch: 0.01,
           goesTo: 'Entrance2nd', //Axinn door or something 
         },

@@ -63,12 +63,13 @@ export default class MainComponent extends React.Component {
     NativeModules.TransitionModule.setTooltips (this.props.name);
     //return <View />;
     return (
-      <View style={styles.panel}>
-        <View style={styles.greetingBox}>
-          {/* <Text style={styles.greeting}>
+      <View >
+        {/* <View style={styles.panel}></View> */}
+        {/* <View style={styles.greetingBox}>
+          <Text style={styles.greeting}>
             Welcome to Middlebury College! Spin around to begin your tour!
-          </Text> */}
-        </View>
+          </Text>
+        </View> */}
       </View>
     );
   }
