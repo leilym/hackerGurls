@@ -55,6 +55,7 @@ import {AppRegistry, View, NativeModules, Text, StyleSheet} from 'react-360';
 import {wrap} from './components/Wrapper/Wrapper.component';
 import TooltipComponent from './components/Tooltip/Tooltip.component';
 import TransitionComponent from './components/Transition/Transition.component';
+//import locations from '../consts/locations';
 
 export default class MainComponent extends React.Component {
   render () {
@@ -64,9 +65,9 @@ export default class MainComponent extends React.Component {
     return (
       <View style={styles.panel}>
         <View style={styles.greetingBox}>
-          <Text style={styles.greeting}>
+          {/* <Text style={styles.greeting}>
             Welcome to Middlebury College! Spin around to begin your tour!
-          </Text>
+          </Text> */}
         </View>
       </View>
     );

@@ -18,159 +18,108 @@ export default (locations = {
       },
     ],
   },
-
-  LandingPage: {
-    name: 'LandingPage',
-    img: 'LandingPage.JPG',
-    tooltips: [
-      {
-        width: 50,
-        height: 50,
-        yaw: 9.55,
-        pitch: 0.2,
-        text: 'Click to enter the Davis Family Library',
-      },
-      {
-        width: 50,
-        height: 50,
-        yaw: 8,
-        pitch: 0.2,
-        text: 'Click to enter the Axinn Center at Starr Library',
-      },
-      {
-        width: 50,
-        height: 50,
-        yaw: 11,
-        pitch: 0.2,
-        text: 'Click to enter McCoullough Student Building',
-      },
-    ],
-    transitions: [
-      {
-        width: 50,
-        height: 50,
-        yaw: 9.55,
-        pitch: 0.01,
-        goesTo: 'DavisDoor',
-      },
-      {
-        width: 50,
-        height: 50,
-        yaw: 8,
-        pitch: 0.01,
-        goesTo: 'Entrance2nd', //Axinn door or something 
-      },
-      {
-        width: 50,
-        height: 50,
-        yaw: 11,
-        pitch: 0.01,
-        goesTo: 'MCC', //Mccor something 
-      },
-    ],
-  },
     
-  DavisDoor: {
-      name: 'DavisDoor',
-      img: 'Test.JPG',
-      tooltips: [
-        {
-          width: 50,
-          height: 50,
-          yaw: 6.8,
-          pitch: 0.01,
-          text: 'Welcome to Davis Library! This is the largest library at Middlebury',
-        },
-        {
-          width: 50,
-          height: 50,
-          yaw: 1.9, //goes left and right
-          pitch: 0.01, //up and down 
-          text: 'Enter Wilson Cafe',
+  // DavisDoor: {
+  //     name: 'DavisDoor',
+  //     img: 'Test.JPG',
+  //     tooltips: [
+  //       {
+  //         width: 50,
+  //         height: 50,
+  //         yaw: 6.8,
+  //         pitch: 0.01,
+  //         text: 'Welcome to Davis Library! This is the largest library at Middlebury',
+  //       },
+  //       {
+  //         width: 50,
+  //         height: 50,
+  //         yaw: 1.9, //goes left and right
+  //         pitch: 0.01, //up and down 
+  //         text: 'Enter Wilson Cafe',
 
-        },
-      ],
-      transitions: [
-        {
-          width: 50,
-          height: 50,
-          yaw: 6.4,
-          pitch: 0.01,
-          goesTo: 'DavisLobby',
-        },
-        {
-          width: 50,
-          height: 50,
-          yaw:-3.4,
-          pitch: 0.01,
-          goesTo: 'Outside',
-        },
-        {
-          width: 50,
-          height: 50,
-          yaw: 1.7,
-          pitch: 0.01,
-          roll: 1,
-          goesTo: 'WilsonCafe',
-        },
-      ],
-    },
+  //       },
+  //     ],
+  //     transitions: [
+  //       {
+  //         width: 50,
+  //         height: 50,
+  //         yaw: 6.4,
+  //         pitch: 0.01,
+  //         goesTo: 'DavisLobby',
+  //       },
+  //       {
+  //         width: 50,
+  //         height: 50,
+  //         yaw:-3.4,
+  //         pitch: 0.01,
+  //         goesTo: 'Outside',
+  //       },
+  //       {
+  //         width: 50,
+  //         height: 50,
+  //         yaw: 1.7,
+  //         pitch: 0.01,
+  //         roll: 1,
+  //         goesTo: 'WilsonCafe',
+  //       },
+  //     ],
+  //   },
     
-  WilsonCafe: {
-      name: 'Wilson Cafe',
-      img: 'WilsonCafe.JPG',
-      transitions: [
-        {
-          width: 50,
-          height: 50,
-          yaw: 0.7,
-          pitch: 0.01,
-          goesTo: 'DavisDoor',
-        },
-      ],
-      tooltips: [
-        {
-          width: 50,
-          height: 50,
-          yaw: 9.9,
-          pitch: 0.01,
-          text: 'Welcome to Wilson Cafe! This is a 24/7 study space with weekday retail coffee and bagel offerings',
+  // WilsonCafe: {
+  //     name: 'Wilson Cafe',
+  //     img: 'WilsonCafe.JPG',
+  //     transitions: [
+  //       {
+  //         width: 50,
+  //         height: 50,
+  //         yaw: 0.7,
+  //         pitch: 0.01,
+  //         goesTo: 'DavisDoor',
+  //       },
+  //     ],
+  //     tooltips: [
+  //       {
+  //         width: 50,
+  //         height: 50,
+  //         yaw: 9.9,
+  //         pitch: 0.01,
+  //         text: 'Welcome to Wilson Cafe! This is a 24/7 study space with weekday retail coffee and bagel offerings',
 
-        },
-      ]
-    },
+  //       },
+  //     ]
+  //   },
     
-  DavisLobby: {
-      name: 'Davis Lobby',
-      img: 'Lobby.JPG',
-      tooltips: [
-        {
-          width: 50,
-          height: 50,
-          yaw: 4,
-          pitch: 0.01,
-          text: 'Students can find and check out library materials including books, cameras, and projectors! ',
+  // DavisLobby: {
+  //     name: 'Davis Lobby',
+  //     img: 'Lobby.JPG',
+  //     tooltips: [
+  //       {
+  //         width: 50,
+  //         height: 50,
+  //         yaw: 4,
+  //         pitch: 0.01,
+  //         text: 'Students can find and check out library materials including books, cameras, and projectors! ',
 
-        },
-        {
-          width: 50,
-          height: 50,
-          yaw: 7.8,
-          pitch: -0.1,
-          text: 'Here on display is a special collections temporary exhibit',
+  //       },
+  //       {
+  //         width: 50,
+  //         height: 50,
+  //         yaw: 7.8,
+  //         pitch: -0.1,
+  //         text: 'Here on display is a special collections temporary exhibit',
 
-        },
-      ],
-      transitions: [
-        {
-          width: 50,
-          height: 50,
-          yaw: 9.55,
-          pitch: 0.01,
-          goesTo: 'DavisDoor',
-        },
-      ],
-    },
+  //       },
+  //     ],
+  //     transitions: [
+  //       {
+  //         width: 50,
+  //         height: 50,
+  //         yaw: 9.55,
+  //         pitch: 0.01,
+  //         goesTo: 'DavisDoor',
+  //       },
+  //     ],
+  //   },
   
     LandingPage: {
       name: 'LandingPage',
@@ -211,7 +160,7 @@ export default (locations = {
           height: 50,
           yaw: 8,
           pitch: 0.01,
-          goesTo: 'Axinn', //Axinn door or something 
+          goesTo: 'Entrance2nd', //Axinn door or something 
         },
         {
           width: 50,
@@ -221,6 +170,7 @@ export default (locations = {
           goesTo: 'mccOutsideMainEntrance', //Mccor something 
         },
       ],
+      
     },
       
     DavisDoor: {
@@ -2768,7 +2718,7 @@ export default (locations = {
   },
   
     //study room in the first floor
-    F0150A:{
+  F0150A:{
       name: "Study Rooms",
       img: "F0150A.JPG",
       transitions:[
@@ -2780,23 +2730,23 @@ export default (locations = {
           goesTo: 'F0Lounge' 
         },
       ],
-    },
+  },
 
         //Axinn things from here
-        Entrance2nd: {
-          name: 'Entrance2nd',
-          img: 'Entrance2nd.JPG',
-          transitions: [
-            {
-              width: 50,
-              height: 50,
-              yaw: 0,
-              pitch: 0.01,
-              goesTo: 'FromEntrance2nd',
-            },
-          ],
-          tooltips: [
-            {
+  Entrance2nd: {
+    name: 'Entrance2nd',
+    img: 'axinn/0.JPG',
+    transitions: [
+      {
+        width: 50,
+        height: 50,
+        yaw: 0,
+        pitch: 0.01,
+        goesTo: 'FromEntrance2nd',
+      },
+    ],
+    tooltips: [
+    {
               width: 50,
               height: 50,
               yaw: 6.8,
@@ -2804,11 +2754,11 @@ export default (locations = {
               text: 'Welcome to Axinn Center at Starr Library! Its the home to academic departments, classrooms and study spaces',
             },
           ]
-      },
+  },
     
-      FromEntrance2nd: {
+  FromEntrance2nd: {
           name: 'FromEntrance2nd',
-          img: '1.JPG',
+          img: 'axinn/1.JPG',
           transitions: [
             {
               width: 50,
@@ -2832,11 +2782,11 @@ export default (locations = {
               goesTo: 'Before229',
             },
           ],
-      },
+  },
     
-      Lobby2nd: {
+  Lobby2nd: {
           name: 'Lobby2nd',
-          img: '2.JPG',
+          img: 'axinn/2.JPG',
           transitions: [
             {
               width: 50,
@@ -2853,11 +2803,11 @@ export default (locations = {
               goesTo: 'FromEntrance2nd',
             },
           ],
-      },
+  },
     
-      Before229: {
+  Before229: {
           name: 'Before229',
-          img: '3.JPG',
+          img: 'axinn/3.JPG',
           transitions: [
             {
               width: 50,
@@ -2895,20 +2845,20 @@ export default (locations = {
               goesTo: 'Past229',
             },
           ],
-      },
+  },
     
-      BigLoungeAxinn: {
-        name: 'BigLoungeAxinn',
-        img: '19.JPG',
-        transitions: [
-          {
-            width: 50,
-            height: 50,
-            yaw: 2.2,
-            pitch: 0.01,
-            goesTo: 'Before229',
-          },
-          {
+  BigLoungeAxinn: {
+    name: 'BigLoungeAxinn',
+    img: 'axinn/19.JPG',
+    transitions: [
+    {
+    width: 50,
+    height: 50,
+    yaw: 2.2,
+    pitch: 0.01,
+    goesTo: 'Before229',
+    },
+    {
             width: 50,
             height: 50,
             yaw: 0.7,
@@ -2927,7 +2877,7 @@ export default (locations = {
     
       Room232: {
         name: 'Room232',
-        img: '20.JPG',
+        img: 'axinn/20.JPG',
         transitions: [
           {
             width: 50,
@@ -2941,7 +2891,7 @@ export default (locations = {
     
       Room229: {
           name: 'Room229',
-          img: '5.JPG',
+          img: 'axinn/5.JPG',
           transitions: [
             {
               width: 50,
@@ -2962,7 +2912,7 @@ export default (locations = {
     
       Past229: {
         name: 'Past229',
-        img: '6.JPG',
+        img: 'axinn/6.JPG',
         transitions: [
           {
             width: 50,
@@ -2997,7 +2947,7 @@ export default (locations = {
     
     Abernathy: {
       name: 'Abernathy',
-      img: '7.JPG',
+      img: 'axinn/7.JPG',
       transitions: [
         {
           width: 50,
@@ -3018,7 +2968,7 @@ export default (locations = {
     
     BeforeElevator2nd: {
       name: 'BeforeElevator2nd',
-      img: '8.JPG',
+      img: 'axinn/8.JPG',
       transitions: [
         {
           width: 50,
@@ -3039,7 +2989,7 @@ export default (locations = {
     
     Elevator2nd: {
       name: 'Elevator2nd',
-      img: '9.JPG',
+      img: 'axinn/9.JPG',
       transitions: [
         {
           width: 50,
@@ -3074,7 +3024,7 @@ export default (locations = {
     
     Stairs2nd: {
       name: 'Stairs2nd',
-      img: '10.JPG',
+      img: 'axinn/10.JPG',
       transitions: [
         {
           width: 50,
@@ -3139,7 +3089,7 @@ export default (locations = {
     
     Elevator3rd: {
       name: 'Elevator3rd',
-      img: '27.JPG',
+      img: 'axinn/27.JPG',
       transitions: [
         {
           width: 50,
@@ -3167,7 +3117,7 @@ export default (locations = {
     
     EnglishOffices: {
       name: 'EnglishOffices',
-      img: '28.JPG',
+      img: 'axinn/28.JPG',
       transitions: [
         {
           width: 50,
@@ -3190,7 +3140,7 @@ export default (locations = {
     
     FilmOffices: {
       name: 'FilmOffices',
-      img: '11.JPG',
+      img: 'axinn/11.JPG',
       transitions: [
         {
           width: 50,
@@ -3213,7 +3163,7 @@ export default (locations = {
     
     InElevator: {
       name: 'InElevator',
-      img: '12.JPG',
+      img: 'axinn/12.JPG',
       transitions: [
         {
           width: 50,
@@ -3248,7 +3198,7 @@ export default (locations = {
     
     Elevator1st: {
       name: 'Elevator1st',
-      img: '13.JPG',
+      img: 'axinn/13.JPG',
       transitions: [
         {
           width: 50,
@@ -3283,7 +3233,7 @@ export default (locations = {
     
     ElevatorBasement: {
       name: 'ElevatorBasement',
-      img: '22.JPG',
+      img: 'axinn/22.JPG',
       transitions: [
         {
           width: 50,
@@ -3318,7 +3268,7 @@ export default (locations = {
     
     EquipmentStudios: {
       name: 'EquipmentStudios',
-      img: '24.JPG',
+      img: 'axinn/24.JPG',
       transitions: [
         {
           width: 50,
@@ -3332,7 +3282,7 @@ export default (locations = {
     
     Room100: {
       name: 'Room100',
-      img: '21.JPG',
+      img: 'axinn/21.JPG',
       transitions: [
         {
           width: 50,
@@ -3353,7 +3303,7 @@ export default (locations = {
     
     Outside100: {
       name: 'Outside100',
-      img: '23.JPG',
+      img: 'axinn/23.JPG',
       transitions: [
         {
           width: 50,
@@ -3374,7 +3324,7 @@ export default (locations = {
     
     Lobby1st: {
       name: 'Lobby1st',
-      img: '14.JPG',
+      img: 'axinn/14.JPG',
       transitions: [
         {
           width: 50,
@@ -3402,7 +3352,7 @@ export default (locations = {
     
     Outside1st: {
       name: 'Outside1st',
-      img: '25.JPG',
+      img: 'axinn/25.JPG',
       transitions: [
         {
           width: 50,
@@ -3416,7 +3366,7 @@ export default (locations = {
     
     Outside105: {
       name: 'Outside105',
-      img: '15.JPG',
+      img: 'axinn/15.JPG',
       transitions: [
         {
           width: 50,
@@ -3444,7 +3394,7 @@ export default (locations = {
     
     Room105: {
       name: 'Room105',
-      img: '16.JPG',
+      img: 'axinn/16.JPG',
       transitions: [
         {
           width: 50,
@@ -3458,7 +3408,7 @@ export default (locations = {
     
     AxinnPrinter: {
       name: 'AxinnPrinter',
-      img: '17.JPG',
+      img: 'axinn/17.JPG',
       transitions: [
         {
           width: 50,
@@ -3479,7 +3429,7 @@ export default (locations = {
     
     Outside109: {
       name: 'Outside109',
-      img: '18.JPG',
+      img: 'axinn/18.JPG',
       transitions: [
         {
           width: 50,
@@ -3500,7 +3450,7 @@ export default (locations = {
     
     Room109: {
       name: 'Room109',
-      img: '26.JPG',
+      img: 'axinn/26.JPG',
       transitions: [
         {
           width: 50,
