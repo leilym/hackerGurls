@@ -2,12 +2,165 @@
 //starting outside the door 
 export default (locations = {
 
-  //Below are Davis Maps 
-  
-  
-    Outside: {
-      name: 'Outside',
-      img: 'Outside.JPG',
+//Below are Davis Maps 
+
+
+  Outside: {
+    name: 'Outside',
+    img: 'Outside.JPG',
+    transitions: [
+      {
+        width: 50,
+        height: 50,
+        yaw: 9.55,
+        pitch: 0.01,
+        goesTo: 'DavisDoor',
+      },
+    ],
+  },
+
+  LandingPage: {
+    name: 'LandingPage',
+    img: 'LandingPage.JPG',
+    tooltips: [
+      {
+        width: 50,
+        height: 50,
+        yaw: 9.55,
+        pitch: 0.2,
+        text: 'Click to enter the Davis Family Library',
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: 8,
+        pitch: 0.2,
+        text: 'Click to enter the Axinn Center at Starr Library',
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: 11,
+        pitch: 0.2,
+        text: 'Click to enter McCoullough Student Building',
+      },
+    ],
+    transitions: [
+      {
+        width: 50,
+        height: 50,
+        yaw: 9.55,
+        pitch: 0.01,
+        goesTo: 'DavisDoor',
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: 8,
+        pitch: 0.01,
+        goesTo: 'Entrance2nd', //Axinn door or something 
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: 11,
+        pitch: 0.01,
+        goesTo: 'MCC', //Mccor something 
+      },
+    ],
+  },
+    
+  DavisDoor: {
+      name: 'DavisDoor',
+      img: 'Test.JPG',
+      tooltips: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 6.8,
+          pitch: 0.01,
+          text: 'Welcome to Davis Library! This is the largest library at Middlebury',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 1.9, //goes left and right
+          pitch: 0.01, //up and down 
+          text: 'Enter Wilson Cafe',
+
+        },
+      ],
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 6.4,
+          pitch: 0.01,
+          goesTo: 'DavisLobby',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw:-3.4,
+          pitch: 0.01,
+          goesTo: 'Outside',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 1.7,
+          pitch: 0.01,
+          roll: 1,
+          goesTo: 'WilsonCafe',
+        },
+      ],
+    },
+    
+  WilsonCafe: {
+      name: 'Wilson Cafe',
+      img: 'WilsonCafe.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 0.7,
+          pitch: 0.01,
+          goesTo: 'DavisDoor',
+        },
+      ],
+      tooltips: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 9.9,
+          pitch: 0.01,
+          text: 'Welcome to Wilson Cafe! This is a 24/7 study space with weekday retail coffee and bagel offerings',
+
+        },
+      ]
+    },
+    
+  DavisLobby: {
+      name: 'Davis Lobby',
+      img: 'Lobby.JPG',
+      tooltips: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 4,
+          pitch: 0.01,
+          text: 'Students can find and check out library materials including books, cameras, and projectors! ',
+
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 7.8,
+          pitch: -0.1,
+          text: 'Here on display is a special collections temporary exhibit',
+
+        },
+      ],
       transitions: [
         {
           width: 50,
@@ -2614,5 +2767,749 @@ export default (locations = {
     ],
   },
   
-});
+    //study room in the first floor
+    F0150A:{
+      name: "Study Rooms",
+      img: "F0150A.JPG",
+      transitions:[
+        {
+          width: 50,
+          height: 50,
+          yaw: -1,
+          pitch: 0.01,
+          goesTo: 'F0Lounge' 
+        },
+      ],
+    },
 
+        //Axinn things from here
+        Entrance2nd: {
+          name: 'Entrance2nd',
+          img: 'Entrance2nd.JPG',
+          transitions: [
+            {
+              width: 50,
+              height: 50,
+              yaw: 0,
+              pitch: 0.01,
+              goesTo: 'FromEntrance2nd',
+            },
+          ],
+          tooltips: [
+            {
+              width: 50,
+              height: 50,
+              yaw: 6.8,
+              pitch: 0.01,
+              text: 'Welcome to Axinn Center at Starr Library! Its the home to academic departments, classrooms and study spaces',
+            },
+          ]
+      },
+    
+      FromEntrance2nd: {
+          name: 'FromEntrance2nd',
+          img: '1.JPG',
+          transitions: [
+            {
+              width: 50,
+              height: 50,
+              yaw: 9.55,
+              pitch: 0.01,
+              goesTo: 'Entrance2nd',
+            },
+            {
+              width: 50,
+              height: 50,
+              yaw: 11.4,
+              pitch: 0.01,
+              goesTo: 'Lobby2nd',
+            },
+            {
+              width: 50,
+              height: 50,
+              yaw: 0,
+              pitch: 0.01,
+              goesTo: 'Before229',
+            },
+          ],
+      },
+    
+      Lobby2nd: {
+          name: 'Lobby2nd',
+          img: '2.JPG',
+          transitions: [
+            {
+              width: 50,
+              height: 50,
+              yaw: 0.5,
+              pitch: 0.01,
+              goesTo: 'Before229',
+            },
+            {
+              width: 50,
+              height: 50,
+              yaw: 2,
+              pitch: 0.01,
+              goesTo: 'FromEntrance2nd',
+            },
+          ],
+      },
+    
+      Before229: {
+          name: 'Before229',
+          img: '3.JPG',
+          transitions: [
+            {
+              width: 50,
+              height: 50,
+              yaw: 9.55,
+              pitch: 0.01,
+              goesTo: 'FromEntrance2nd',
+            },
+            {
+              width: 50,
+              height: 50,
+              yaw: 9.55,
+              pitch: 0.01,
+              goesTo: '',
+            },
+            {
+              width: 50,
+              height: 50,
+              yaw: 0.25,
+              pitch: 0.01,
+              goesTo: 'Room229',
+            },
+            {
+              width: 50,
+              height: 50,
+              yaw: -0.3,
+              pitch: 0.01,
+              goesTo: 'BigLoungeAxinn',
+            },
+            {
+              width: 50,
+              height: 50,
+              yaw: 0,
+              pitch: 0.01,
+              goesTo: 'Past229',
+            },
+          ],
+      },
+    
+      BigLoungeAxinn: {
+        name: 'BigLoungeAxinn',
+        img: '19.JPG',
+        transitions: [
+          {
+            width: 50,
+            height: 50,
+            yaw: 2.2,
+            pitch: 0.01,
+            goesTo: 'Before229',
+          },
+          {
+            width: 50,
+            height: 50,
+            yaw: 0.7,
+            pitch: 0.01,
+            goesTo: 'Past229',
+          },
+          {
+            width: 50,
+            height: 50,
+            yaw: 2.8,
+            pitch: 0.01,
+            goesTo: 'Room232',
+          },
+        ],
+      },
+    
+      Room232: {
+        name: 'Room232',
+        img: '20.JPG',
+        transitions: [
+          {
+            width: 50,
+            height: 50,
+            yaw: 0.6,
+            pitch: 0.01,
+            goesTo: 'BigLoungeAxinn',
+          },
+        ],
+      },
+    
+      Room229: {
+          name: 'Room229',
+          img: '5.JPG',
+          transitions: [
+            {
+              width: 50,
+              height: 50,
+              yaw: 8.8,
+              pitch: 0.01,
+              goesTo: 'Before229',
+            },
+            {
+              width: 50,
+              height: 50,
+              yaw: 10.4,
+              pitch: 0.01,
+              goesTo: 'Past229',
+            },
+          ],
+      },
+    
+      Past229: {
+        name: 'Past229',
+        img: '6.JPG',
+        transitions: [
+          {
+            width: 50,
+            height: 50,
+            yaw: 9,
+            pitch: 0.01,
+            goesTo: '229',
+          },
+          {
+            width: 50,
+            height: 50,
+            yaw: -0.2,
+            pitch: 0.01,
+            goesTo: 'Abernathy',
+          },
+          {
+            width: 50,
+            height: 50,
+            yaw: 0,
+            pitch: 0.01,
+            goesTo: 'BeforeElevator2nd',
+          },
+          {
+            width: 50,
+            height: 50,
+            yaw: -2.3,
+            pitch: 0.01,
+            goesTo: 'BigLoungeAxinn',
+          },
+        ],
+    },
+    
+    Abernathy: {
+      name: 'Abernathy',
+      img: '7.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 9.9,
+          pitch: 0.01,
+          goesTo: 'Past229',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 9.2,
+          pitch: 0.01,
+          goesTo: 'BeforeElevator2nd',
+        },
+      ],
+    },
+    
+    BeforeElevator2nd: {
+      name: 'BeforeElevator2nd',
+      img: '8.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 9.6,
+          pitch: 0.01,
+          goesTo: 'Abernathy',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 1,
+          pitch: 0.01,
+          goesTo: 'Elevator2nd',
+        },
+      ],
+    },
+    
+    Elevator2nd: {
+      name: 'Elevator2nd',
+      img: '9.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 9.6,
+          pitch: 0.01,
+          goesTo: 'BeforeElevator2nd',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 10.05,
+          pitch: 0.01,
+          goesTo: 'InElevator',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 1.7,
+          pitch: 0.01,
+          goesTo: 'Stairs2nd',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 6.3,
+          pitch: 0.01,
+          goesTo: 'FilmOffices',
+        },
+      ],
+    },
+    
+    Stairs2nd: {
+      name: 'Stairs2nd',
+      img: '10.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 9.7,
+          pitch: 0.01,
+          goesTo: 'Elevator2nd',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 12,
+          pitch: -0.4,
+          goesTo: 'Elevator1st',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 7.2,
+          pitch: 0.4,
+          goesTo: 'Elevator3rd',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 12,
+          pitch: -0.7,
+          goesTo: 'ElevatorBasement',
+        },
+      ],
+      tooltips: [
+        {
+          width: 30,
+          height: 30,
+          yaw: 9.8,
+          pitch: 0.01,
+          text: 'Click on this to visit the 2nd floor',
+        },
+        {
+          width: 30,
+          height: 30,
+          yaw: 12.1,
+          pitch: -0.4,
+          text: 'Click on this to visit the 1st floor',
+        },
+        {
+          width: 30,
+          height: 30,
+          yaw: 7.3,
+          pitch: 0.4,
+          text: 'Click on this to visit the 3rd floor',
+        },
+        {
+          width: 30,
+          height: 30,
+          yaw: 12.1,
+          pitch: -0.7,
+          text: 'Click on this to visit the basement floor',
+        },
+      ],
+    },
+    
+    Elevator3rd: {
+      name: 'Elevator3rd',
+      img: '27.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 9.55,
+          pitch: 0.01,
+          goesTo: 'Stairs2nd',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: -0.75,
+          pitch: 0.01,
+          goesTo: 'InElevator',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw:1.6,
+          pitch: 0.01,
+          goesTo: 'EnglishOffices',
+        },
+      ],
+    },
+    
+    EnglishOffices: {
+      name: 'EnglishOffices',
+      img: '28.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 9.5,
+          pitch: 0.01,
+          goesTo: 'Elevator3rd',
+        },
+      ],
+      tooltips: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 0.3,
+          pitch: 0.01,
+          text: 'These are the English and American Literature department offices',
+        },
+      ],
+    },
+    
+    FilmOffices: {
+      name: 'FilmOffices',
+      img: '11.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 9.55,
+          pitch: 0.01,
+          goesTo: 'Elevator2nd',
+        },
+      ],
+      tooltips: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 0,
+          pitch: 0.01,
+          text: 'These are the film department offices',
+        },
+      ],
+    },
+    
+    InElevator: {
+      name: 'InElevator',
+      img: '12.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: -0.2,
+          pitch: -0.13,
+          goesTo: 'Elevator3rd',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: -0.2,
+          pitch: -0.2,
+          goesTo: 'Elevator2nd',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: -0.2,
+          pitch: -0.27,
+          goesTo: 'Elevator1st',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: -0.2,
+          pitch: -0.35,
+          goesTo: 'ElevatorBasement', 
+        },
+      ],
+    },
+    
+    Elevator1st: {
+      name: 'Elevator1st',
+      img: '13.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: -0.6,
+          pitch: 0.01,
+          goesTo: 'InElevator',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 9.4,
+          pitch: -0.1,
+          goesTo: 'Stairs2nd',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: -1.7,
+          pitch: 0.01,
+          goesTo: 'Lobby1st',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 1.6,
+          pitch: 0.01,
+          goesTo: 'Room100',
+        },
+      ],
+    },
+    
+    ElevatorBasement: {
+      name: 'ElevatorBasement',
+      img: '22.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 0.25,
+          pitch: 0.01,
+          goesTo: 'InElevator',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: - 1.8,
+          pitch: 0.01,
+          goesTo: 'Stairs2nd',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: -0.5,
+          pitch: 0.01,
+          goesTo: 'EquipmentStudios',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: -3.5,
+          pitch: 0.01,
+          goesTo: 'Outside100',
+        },
+      ],
+    },
+    
+    EquipmentStudios: {
+      name: 'EquipmentStudios',
+      img: '24.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 9.55,
+          pitch: 0.01,
+          goesTo: 'ElevatorBasement',
+        },
+      ],
+    },
+    
+    Room100: {
+      name: 'Room100',
+      img: '21.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 9.2,
+          pitch: 0.23,
+          goesTo: 'Elevator1st',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 1,
+          pitch: 0.01,
+          goesTo: 'Outside100',
+        },
+      ],
+    },
+    
+    Outside100: {
+      name: 'Outside100',
+      img: '23.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 0,
+          pitch: 0.01,
+          goesTo: 'ElevatorBasement',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 1,
+          pitch: 0.01,
+          goesTo: 'Room100',
+        },
+      ],
+    },
+    
+    Lobby1st: {
+      name: 'Lobby1st',
+      img: '14.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 9.45,
+          pitch: 0.01,
+          goesTo: 'Elevator1st',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 7.6,
+          pitch: 0.01,
+          goesTo: 'Outside1st',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: -1.6,
+          pitch: 0.01,
+          goesTo: 'Outside105',
+        },
+      ],
+    },
+    
+    Outside1st: {
+      name: 'Outside1st',
+      img: '25.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 0,
+          pitch: 0.01,
+          goesTo: 'Lobby1st',
+        },
+      ],
+    },
+    
+    Outside105: {
+      name: 'Outside105',
+      img: '15.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 9.55,
+          pitch: 0.01,
+          goesTo: 'Lobby1st',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 1.2,
+          pitch: 0.01,
+          goesTo: 'Room105',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: 0.2,
+          pitch: 0.01,
+          goesTo: 'AxinnPrinter',
+        },
+      ],
+    },
+    
+    Room105: {
+      name: 'Room105',
+      img: '16.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 9.45,
+          pitch: 0.01,
+          goesTo: 'Outside105',
+        },
+      ],
+    },
+    
+    AxinnPrinter: {
+      name: 'AxinnPrinter',
+      img: '17.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 9.55,
+          pitch: 0.01,
+          goesTo: 'Outside105',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: -0.2,
+          pitch: 0.01,
+          goesTo: 'Outside109',
+        },
+      ],
+    },
+    
+    Outside109: {
+      name: 'Outside109',
+      img: '18.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 9.55,
+          pitch: 0.01,
+          goesTo: 'AxinnPrinter',
+        },
+        {
+          width: 50,
+          height: 50,
+          yaw: -0.3,
+          pitch: 0.01,
+          goesTo: 'Room109',
+        },
+      ],
+    },
+    
+    Room109: {
+      name: 'Room109',
+      img: '26.JPG',
+      transitions: [
+        {
+          width: 50,
+          height: 50,
+          yaw: 8.8,
+          pitch: 0.01,
+          goesTo: 'Outside109',
+        },
+      ],
+    },
+       
+  });
