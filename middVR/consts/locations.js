@@ -2117,18 +2117,19 @@ export default (locations = {
   mccMailCenter1:{
       name: 'mcc Mail center ',
       img: 'mcc/mccMailCenter1.JPG',
+
       transitions: [
         {
           width: 50,
           height: 50,
-          yaw: 4.5,
+          yaw: 3.3,
           pitch: 0.01,
           goesTo: 'mccToMailCenter',
         },
         {
           width: 50,
           height: 50,
-          yaw: 0.4,
+          yaw: 0.1,
           pitch: 0.01,
           goesTo: 'mccMailCenter2',
         },
@@ -2138,16 +2139,75 @@ export default (locations = {
   mccMailCenter2:{
     name: 'mcc mail center 2',
     img: 'mcc/mccMailCenter2.JPG',
+    tooltips: [
+      {
+        width: 50,
+        height: 50,
+        yaw: -2.4,
+        pitch: 0.01,
+        text: 'Students are waiting in line to get their mail',
+      },
+    ],
     transitions: [
       {
         width: 50,
         height: 50,
-        yaw: -3.7,
+        yaw: -2,
         pitch: 0.01,
         goesTo: 'mccMailCenter1',
     },
+
+    {
+      width: 50,
+      height: 50,
+      yaw: 0,
+      pitch: 0.01,
+      goesTo: 'mccStairsAfterMC',
+  },
     ],
 
+  },
+
+  mccStairsAfterMC:{
+    name: 'Stairs after MailCenter',
+    img: 'mcc/mccStairsAfterMC.JPG',
+    transitions: [
+      {
+        width: 50,
+        height: 50,
+        yaw: -3.8,
+        pitch: 0.01,
+        goesTo: 'mccMailCenter2',
+      },
+      {
+      width: 50,
+      height: 50,
+      yaw: 0.2,
+      pitch: 0.01,
+      goesTo: 'mccEntrance2Indoors',
+    },
+    ],
+  },
+
+  mccEntrance2Indoors:{
+    name: 'Second entrance - Indoors',
+    img: 'mcc/mccEntrance2Indoors.JPG',
+    transitions: [
+      {
+        width: 50,
+        height: 50,
+        yaw: 2.2,
+        pitch: 0.01,
+        goesTo: 'mccStairsAfterMC',
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: 2.9,
+        pitch: 0.01,
+        goesTo: 'mccOutsideBS',
+      },
+    ],
   },
 
   mccMiddX: {
@@ -2253,7 +2313,7 @@ export default (locations = {
       {
         width: 50,
         height: 50,
-        yaw: -6,
+        yaw: -3,
         pitch: 0.01,
         goesTo: 'mccCR3',
       },
@@ -2380,7 +2440,7 @@ export default (locations = {
       {
         width: 50,
         height: 50,
-        yaw: -1.3,
+        yaw: -1.6,
         pitch: 0.01,
         goesTo: 'mccOutsideGrille',
       },
@@ -2391,6 +2451,36 @@ export default (locations = {
         yaw: 0.1,
         pitch: 0.01,
         goesTo: 'mccWilson',
+      },
+
+      {
+        width: 50,
+        height: 50,
+        yaw: 1.6,
+        pitch: 0.01,
+        goesTo: 'mccHallwayAfterWilson',
+      },
+    ],
+  },
+
+  mccHallwayAfterWilson:{
+    name: "Outside Wilson Hall - Left",
+    img: 'mcc/mccHallwayAfterWilson.JPG',
+
+    transitions:[
+      {
+        width: 50,
+        height: 50,
+        yaw: 0,
+        pitch: 0.01,
+        goesTo: 'mccOutsideWilson',
+      },
+      {
+        width: 50,
+        height: 50,
+        yaw: 3.3,
+        pitch: 0.01,
+        goesTo: 'mccStairsToMG',
       },
     ],
   },
@@ -2439,14 +2529,64 @@ export default (locations = {
         pitch: 0.01,
         goesTo: 'mccBookStore',
       },
-
       {
         width: 50,
         height: 50,
         yaw: 3,
         pitch: 0.01,
-        goesTo: 'mccOutsideWilson',
+        goesTo: 'mccOutsideGrille',
       },
+      {
+        width: 50,
+        height: 50,
+        yaw: 1.2,
+        pitch: 0.01,
+        goesTo: 'mccEntrance2Indoors',
+      },
+
+    ],
+  },
+
+  mccStairsToMG:{
+    name: "Stairs to meditation room",
+    img: 'mcc/mccStairsToMG.JPG',
+
+    tooltips:[
+      {
+        width: 50,
+        height: 50,
+        yaw: -3,
+        pitch: 0.17,
+        text: 'These stairs lead to Mitchel Green room. It is a study, meditation, etc. room.',
+      },
+
+      {
+        width: 50,
+        height: 50,
+        yaw: -2,
+        pitch: 0.07,
+        text: 'Click this to exit McCullough - Main entrance',
+      },
+
+    ],
+
+    transitions:[
+      {
+        width: 50,
+        height: 50,
+        yaw: 3.5,
+        pitch: 0.01,
+        goesTo: 'mccHallwayAfterWilson',
+      },
+
+      {
+        width: 50,
+        height: 50,
+        yaw: -2,
+        pitch: 0.01,
+        goesTo: 'mccOutsideMainEntrance',
+      },
+
     ],
   },
 
