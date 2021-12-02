@@ -7,7 +7,7 @@ export default (locations = {
 
   Outside: {
     name: 'Outside',
-    img: 'Outside.JPG',
+    img: 'davis/Outside.JPG',
     transitions: [
       {
         width: 50,
@@ -152,7 +152,7 @@ export default (locations = {
       
     DavisDoor: {
         name: 'DavisDoor',
-        img: 'Test.JPG',
+        img: 'davis/Test.JPG',
         tooltips: [
           {
             width: 50,
@@ -198,7 +198,7 @@ export default (locations = {
       
     WilsonCafe: {
         name: 'Wilson Cafe',
-        img: 'WilsonCafe.JPG',
+        img: 'davis/WilsonCafe.JPG',
         transitions: [
           {
             width: 50,
@@ -222,7 +222,7 @@ export default (locations = {
       
     DavisLobby: {
         name: 'Davis Lobby',
-        img: 'Lobby.JPG',
+        img: 'davis/Lobby.JPG',
         tooltips: [
           {
             width: 50,
@@ -276,7 +276,7 @@ export default (locations = {
      
     FromLobbyLeft: {
         name: 'From Lobby Left',
-        img: 'FromLobbyLeft.JPG',
+        img: 'davis/FromLobbyLeft.JPG',
         transitions: [
           {
             width: 50,
@@ -312,7 +312,7 @@ export default (locations = {
       //in my current status the tranisitions aren't right
     DownLobbyLeft: {
         name: 'Down Lobby Left',
-        img: 'DownLobbyLeft.JPG',
+        img: 'davis/DownLobbyLeft.JPG',
         transitions: [
           {
             width: 50,
@@ -348,7 +348,7 @@ export default (locations = {
       
       F1ViewingRoom:{
         name: "Viewing Room",
-        img: "F1ViewingRoom.JPG",
+        img: "davis/F1ViewingRoom.JPG",
         transitions:[
           {
             width: 50,
@@ -362,7 +362,7 @@ export default (locations = {
   
     DownDownLobbyLeft: {
         name: 'Down Down Lobby Left',
-        img: 'DownDownLobbyLeft.JPG',
+        img: 'davis/DownDownLobbyLeft.JPG',
         transitions: [
           {
             width: 50,
@@ -383,7 +383,7 @@ export default (locations = {
   
     PrinterCorridorFirst: {
         name: 'Printer Corridor First Floor',
-        img: 'PrinterCorridorFirst.JPG',
+        img: 'davis/PrinterCorridorFirst.JPG',
         transitions: [
           {
             width: 50,
@@ -411,7 +411,7 @@ export default (locations = {
   
     PastPrinterCorner: {
         name: 'PastPrinterCorner',
-        img: 'PastPrinterCorner.JPG',
+        img: 'davis/PastPrinterCorner.JPG',
         transitions: [
           {
             width: 50,
@@ -439,7 +439,7 @@ export default (locations = {
   
     InsideCarrellByPrinters: {
         name: 'InsideCarrellByPrinters',
-        img: 'InsideCarrellByPrinters.JPG',
+        img: 'davis/InsideCarrellByPrinters.JPG',
         transitions: [
           {
             width: 50,
@@ -462,7 +462,7 @@ export default (locations = {
   
     DownPrinterCorner: {
         name: 'DownPrinterCorner',
-        img: 'DownPrinterCorner.JPG',
+        img: 'davis/DownPrinterCorner.JPG',
         transitions: [
           {
             width: 50,
@@ -483,7 +483,7 @@ export default (locations = {
   
     FirstFloorLeftCorner: {
         name: 'FirstFloorLeftCorner',
-        img: 'FirstFloorLeftCorner.JPG',
+        img: 'davis/FirstFloorLeftCorner.JPG',
         transitions: [
           {
             width: 50,
@@ -511,7 +511,7 @@ export default (locations = {
   
     FirstFloorLeftCornerElevator: {
         name: 'FirstFloorLeftCornerElevator',
-        img: 'FirstFloorLeftCornerElevator.JPG',
+        img: 'davis/FirstFloorLeftCornerElevator.JPG',
         transitions: [
           {
             width: 50,
@@ -532,7 +532,7 @@ export default (locations = {
   
     BackHallway: {
         name: 'BackHallway',
-        img: 'BackHallway.JPG',
+        img: 'davis/BackHallway.JPG',
         transitions: [
           
           {
@@ -575,7 +575,7 @@ export default (locations = {
   
     PrintersFirstFloor: {
         name: 'Printer First Floor',
-        img: 'PrintersFirstFloor.JPG',
+        img: 'davis/PrintersFirstFloor.JPG',
         transitions: [
           {
             width: 50,
@@ -589,7 +589,7 @@ export default (locations = {
   
     FromEntranceRight: {
         name: 'From Entrance Lobby',
-        img: 'FromEntranceRight.JPG',
+        img: 'davis/FromEntranceRight.JPG',
         tooltips: [
           {
             width: 50,
@@ -641,7 +641,7 @@ export default (locations = {
   
     LobbyRightIn: {
         name: 'Lobby Right to Lobby In',
-        img: 'LobbyRightIn.JPG',
+        img: 'davis/LobbyRightIn.JPG',
         tooltips: [
         ],
         transitions: [
@@ -678,7 +678,7 @@ export default (locations = {
   
     iMacWorkStation: {
         name: 'iMacWorkStation',
-        img: 'iMacWorkStation.JPG',
+        img: 'davis/iMacWorkStation.JPG',
         tooltips: [
         ],
         transitions: [
@@ -708,7 +708,7 @@ export default (locations = {
   
     BloombergStation: {
         name: 'BloombergStation',
-        img: 'BloombergStation.JPG',
+        img: 'davis/BloombergStation.JPG',
         tooltips: [
         ],
         transitions: [
@@ -731,7 +731,7 @@ export default (locations = {
   
     RightStairs: {
         name: 'RightStairs',
-        img: 'RightStairs.JPG',
+        img: 'davis/RightStairs.JPG',
         transitions: [
           {
             width: 50,
@@ -752,7 +752,7 @@ export default (locations = {
   
     RightFromLobbyStairs: {
         name: 'RightFromLobbyStairs',
-        img: 'RightFromLobbyStairs.JPG',
+        img: 'davis/RightFromLobbyStairs.JPG',
         transitions: [
           {
             width: 50,
@@ -780,7 +780,7 @@ export default (locations = {
   
     UpstairsRightRight: {
         name: 'UpstairsRightRight',
-        img: 'UpstairsRightRight.JPG',
+        img: 'davis/UpstairsRightRight.JPG',
         transitions: [
           {
             width: 50,
@@ -815,7 +815,7 @@ export default (locations = {
   
     UpstairsCenterOver: {
         name: 'UpstairsCenterOver',
-        img: 'UpstairsCenterOver.JPG',
+        img: 'davis/UpstairsCenterOver.JPG',
         transitions: [
           {
             width: 50,
@@ -835,7 +835,7 @@ export default (locations = {
       },     
     UpstairsLobby: {
       name: 'UpstairsLobby',
-      img: 'UpstairsLobby.JPG',
+      img: 'davis/UpstairsLobby.JPG',
       transitions: [
         {
           width: 50,
@@ -879,7 +879,7 @@ export default (locations = {
       
     Terrace2nd: {
         name: 'Terrace2nd',
-        img: 'Terrace2nd.JPG',
+        img: 'davis/Terrace2nd.JPG',
         transitions: [
           {
             width: 50,
@@ -893,7 +893,7 @@ export default (locations = {
   
     LeftFromLobbyStairs: {
         name: 'LeftFromLobbyStairs',
-        img: 'LeftFromLobbyStairs.JPG',
+        img: 'davis/LeftFromLobbyStairs.JPG',
         transitions: [
           {
             width: 50,
@@ -921,7 +921,7 @@ export default (locations = {
   
     Outside301A: {
       name: 'Outside301A',
-      img: 'Outside301A.JPG',
+      img: 'davis/Outside301A.JPG',
       transitions: [
         {
           width: 50,
@@ -958,7 +958,7 @@ export default (locations = {
    
     Outside301F: {
       name: 'Outside301F',
-      img: 'Outside301F.JPG',
+      img: 'davis/Outside301F.JPG',
       transitions: [
         {
           width: 50,
@@ -979,7 +979,7 @@ export default (locations = {
   
     CornerNear301F: {
       name: 'CornerNear301F',
-      img: 'CornerNear301F.JPG',
+      img: 'davis/CornerNear301F.JPG',
       transitions: [
         {
           width: 50,
@@ -1000,7 +1000,7 @@ export default (locations = {
   
     StudyRoomStairs2nd: {
       name: 'StudyRoomStairs2nd',
-      img: 'StudyRoomStairs2nd.JPG',
+      img: 'davis/StudyRoomStairs2nd.JPG',
       transitions: [
         {
           width: 50,
@@ -1042,7 +1042,7 @@ export default (locations = {
   
     OutsideWilson: {
         name: 'Outside Wilson',
-        img: 'OutsideWilsonMedia.JPG',
+        img: 'davis/OutsideWilsonMedia.JPG',
         tooltips: [
           {
             width: 50,
@@ -1087,7 +1087,7 @@ export default (locations = {
   
     WilsonMediaLab: {
         name: 'WilsonMediaLab',
-        img: 'WilsonMediaLab.JPG',
+        img: 'davis/WilsonMediaLab.JPG',
         transitions: [
           {
             width: 50,
@@ -1101,7 +1101,7 @@ export default (locations = {
      
     CTLR: {
         name: 'CTLR',
-        img: 'CTLR.JPG',
+        img: 'davis/CTLR.JPG',
         tooltips: [
           {
             width: 50,
@@ -1131,7 +1131,7 @@ export default (locations = {
      
     AnimationStudio: {
         name: 'Animation Studio',
-        img: 'AnimationStudio.JPG',
+        img: 'davis/AnimationStudio.JPG',
         tooltips: [
           {
             width: 50,
@@ -1154,7 +1154,7 @@ export default (locations = {
       
     OutsideAnimationStudio: {
         name: 'Outside Animation Studio',
-        img: 'AnimationOutside.JPG',
+        img: 'davis/AnimationOutside.JPG',
         transitions: [
           {
             width: 50,
@@ -1182,7 +1182,7 @@ export default (locations = {
   
     BehindAnimation: {
         name: 'Behind Animation',
-        img: 'BehindAnimation.JPG',
+        img: 'davis/BehindAnimation.JPG',
         transitions: [
           {
             width: 50,
@@ -1204,7 +1204,7 @@ export default (locations = {
   
     StairsUpCTLRLeft: {
         name: 'StairsUpCTLRLeft',
-        img: 'StairsUpCTLRLeft.JPG',
+        img: 'davis/StairsUpCTLRLeft.JPG',
         transitions: [
           {
             width: 50,
@@ -1226,7 +1226,7 @@ export default (locations = {
   
     CTLRRight: {
         name: 'CTLR Right',
-        img: 'CTLRRight.JPG',
+        img: 'davis/CTLRRight.JPG',
         transitions: [
           {
             width: 50,
@@ -1268,7 +1268,7 @@ export default (locations = {
       
     LeftOfOutsideWilson: {
         name: 'LeftOfOutsideWilson',
-        img: 'LeftOfOutsideWilson.JPG',
+        img: 'davis/LeftOfOutsideWilson.JPG',
         transitions: [
           {
             width: 50,
@@ -1289,7 +1289,7 @@ export default (locations = {
   
     OutsideMeditationRoom1:{
         name: 'Outside Meditation Room',
-        img: "OutsideMedRCurtain.JPG",
+        img: "davis/OutsideMedRCurtain.JPG",
         transitions:[
           {
             width: 50,
@@ -1303,7 +1303,7 @@ export default (locations = {
   
     OutsideMeditationRoom2:{
         name: 'Outside Meditation Room',
-        img: "OutsideMedR.JPG",
+        img: "davis/OutsideMedR.JPG",
         transitions:[
           {
           width: 50,
@@ -1325,7 +1325,7 @@ export default (locations = {
   
     MeditationRoom: {
         name: 'Meditation and Resting room',
-        img: "MeditationRoom.JPG",
+        img: "davis/MeditationRoom.JPG",
         transitions: [
           {
             width: 50,
@@ -1347,7 +1347,7 @@ export default (locations = {
   
       LeftSideStairs:{
         name: 'study carrels - 2nd floor',
-        img: "LeftSideStairs2.JPG",
+        img: "davis/LeftSideStairs2.JPG",
         transitions:[
           {
             width: 50,
@@ -1370,7 +1370,7 @@ export default (locations = {
       // leftSide of the main stairs (from ground floor lobby) 2nd Floor 
       LeftSideStairs2F:{
         name: 'study carrels - 2nd floor',
-        img: "LeftSideStairs2F.JPG",
+        img: "davis/LeftSideStairs2F.JPG",
         transitions:[
           {
             width: 50,
@@ -1399,7 +1399,7 @@ export default (locations = {
       // leftSide of the main stairs (from ground floor lobby) 2nd Floor - 2nd part, further down
       LeftSideStairs2F2:{
         name: 'Second Floor - Ending',
-        img: "LeftSideStairs2F2.JPG",
+        img: "davis/LeftSideStairs2F2.JPG",
         transitions:[
           {
             width: 50,
@@ -1428,7 +1428,7 @@ export default (locations = {
       // leftSide of the main stairs (from ground floor lobby) 2nd Floor - the ending
       RightSide2FEnd:{
         name: 'Second Floor - Study desks',
-        img: "RightSide2FEnd.JPG",
+        img: "davis/RightSide2FEnd.JPG",
         transitions:[
           {
             width: 50,
@@ -1451,7 +1451,7 @@ export default (locations = {
       //is this an end to the tour? 
       RightSide2FEnd2:{
         name: 'Second Floor - Study desks',
-        img: "RightSide2FEnd2.JPG",
+        img: "davis/RightSide2FEnd2.JPG",
         transitions:[
           {
             width: 50,
@@ -1472,7 +1472,7 @@ export default (locations = {
   
       RightHallWayEnd:{
         name: 'RightHallWayEnd',
-        img: "RightHallWayEnd.JPG",
+        img: "davis/RightHallWayEnd.JPG",
         transitions:[
           {
             width: 50,
@@ -1500,7 +1500,7 @@ export default (locations = {
   
       RightHallWayMiddle:{
         name: 'RightHallWayMiddle',
-        img: "RightHallWayMiddle.JPG",
+        img: "davis/RightHallWayMiddle.JPG",
         transitions:[
           {
             width: 50,
@@ -1535,7 +1535,7 @@ export default (locations = {
   
       RightHallWayMiddleOver:{
         name: 'RightHallWayMiddleOver',
-        img: "RightHallWayMiddleOver.JPG",
+        img: "davis/RightHallWayMiddleOver.JPG",
         transitions:[
           {
             width: 50,
@@ -1549,7 +1549,7 @@ export default (locations = {
   
       RightHallWayEnd:{
         name: 'RightHallWayEnd',
-        img: "RightHallWayEnd.JPG",
+        img: "davis/RightHallWayEnd.JPG",
         transitions:[
           {
             width: 50,
@@ -1574,7 +1574,7 @@ export default (locations = {
       //is this an end to the tour? 
       RightSide2FEnd2:{
         name: 'Second Floor - Study desks',
-        img: "RightSide2FEnd2.JPG",
+        img: "davis/RightSide2FEnd2.JPG",
         transitions:[
           {
             width: 50,
@@ -1596,7 +1596,7 @@ export default (locations = {
   
       RightStairsEntranceLobby:{
         name: 'Stairs to Downstairs and Special Collection Entrance ',
-        img: "RightStairsEntranceLobby.JPG",
+        img: "davis/RightStairsEntranceLobby.JPG",
         transitions:[
           {
             width: 50,
@@ -1619,7 +1619,7 @@ export default (locations = {
       //helpdesk to downstairs - haven't connected helpdesk to it though
       StairsDownFromHelpdesk:{
         name: 'Stairs to Downstairs',
-        img: "StairsDownFromHelpdesk.JPG",
+        img: "davis/StairsDownFromHelpdesk.JPG",
         transitions:[
           {
             width: 50,
@@ -1641,7 +1641,7 @@ export default (locations = {
       //helpdesk
       HelpDesk:{
         name:'ITS HelpDesk',
-        img: "HelpDesk.JPG",
+        img: "davis/HelpDesk.JPG",
         transitions:[
           {
             width: 50,
@@ -1662,7 +1662,7 @@ export default (locations = {
   
       F0OutsideSC:{
         name: 'Stairs to Downstairs',
-        img: "F0OutsideSC.JPG",
+        img: "davis/F0OutsideSC.JPG",
         transitions:[
           {
             width: 50,
@@ -1697,7 +1697,7 @@ export default (locations = {
   
       OutsideSC:{
         name: 'Special Collections Entrance',
-        img: "OutsideSC.JPG",
+        img: "davis/OutsideSC.JPG",
         tooltips: [
           {
             width: 50,
@@ -1742,7 +1742,7 @@ export default (locations = {
   
       SpecialCollection1:{
         name: 'Special Collection #1',
-        img: "SpecialCollection1.JPG",
+        img: "davis/SpecialCollection1.JPG",
         tooltips: [
           {
             width: 50,
@@ -1771,7 +1771,7 @@ export default (locations = {
       },
       SpecialCollection2:{
         name: 'Special Collection #2',
-        img: "SpecialCollection2.JPG",
+        img: "davis/SpecialCollection2.JPG",
         transitions:[
           {
             width: 50,
@@ -1792,7 +1792,7 @@ export default (locations = {
   
       SpecialCollection3:{
         name: "Special Collections #3",
-        img: "SpecialCollection3.JPG",
+        img: "davis/SpecialCollection3.JPG",
         transitions:[
           {
             width: 50,
@@ -1813,7 +1813,7 @@ export default (locations = {
   
       F0Lounge:{
         name: 'Study Lounge - Downstairs',
-        img: "F0Lounge.JPG",
+        img: "davis/F0Lounge.JPG",
         tooltips: [
           {
             width: 50,
@@ -1902,7 +1902,7 @@ export default (locations = {
   
       F0AdjLeft:{
         name: "Adjecent Left Side shelves",
-        img: "F0AdjLeft.JPG",
+        img: "davis/F0AdjLeft.JPG",
         tooltips:[
           {
             width: 50,
@@ -1933,7 +1933,7 @@ export default (locations = {
   
       F0AdjRight:{
         name: "Right side shelves",
-        img: "F0AdjRight.JPG",
+        img: "davis/F0AdjRight.JPG",
         tooltips: [
           {
             width: 50,
@@ -1960,7 +1960,7 @@ export default (locations = {
   
       F0LeftMostHall:{
         name: "Bottom Floor shelves",
-        img: "F0LeftMostHall.JPG",
+        img: "davis/F0LeftMostHall.JPG",
         transitions:[
           {
             width: 50,
@@ -1981,7 +1981,7 @@ export default (locations = {
   
       F0LeftMostHall2:{
         name: "Shelves Hallway 2",
-        img: "F0LeftMostHall2.JPG",
+        img: "davis/F0LeftMostHall2.JPG",
         transitions:[
           {
             width: 50,
@@ -2003,7 +2003,7 @@ export default (locations = {
   
       F0LeftMostHall3:{
         name: "Shelves Hallway 3",
-        img: "F0LeftMostHall3.JPG",
+        img: "davis/F0LeftMostHall3.JPG",
         transitions:[
           {
             width: 50,
@@ -2025,7 +2025,7 @@ export default (locations = {
   
       F0LeftMostEnd:{
         name: "Exit - first floor",
-        img: "F0LeftMostEnd.JPG",
+        img: "davis/F0LeftMostEnd.JPG",
         transitions:[
           {
             width: 50,
@@ -2040,7 +2040,7 @@ export default (locations = {
       //study room in the first floor
       F0150A:{
         name: "Study Rooms",
-        img: "F0150A.JPG",
+        img: "davis/F0150A.JPG",
         transitions:[
           {
             width: 50,

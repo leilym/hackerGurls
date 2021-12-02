@@ -9,7 +9,7 @@
 ### Steps to add new locations 
 
 1. Upload 360 images to appropriate folder in static_assets 
-2. Go to location.js 
+2. Go to locations.js 
 3. Make a new element for each new image specifying name, img, transitions, and tooltips if needed. (feel free to copy and paste existing elements and change as necessary)
 4. Find existing locations that will lead to newly added location and add  appropirate transitions 
 5. cd middvr 
@@ -21,7 +21,6 @@
    - Plan the route prior to taking pictures 
    - Have a mechanism for naming photos 
 2. Play around with the yaws to get use to it
-
 
 ### Helpful information 
 
