@@ -1709,13 +1709,13 @@ export default (locations = {
         ],
   
         transitions:[
-          {
-            width: 50,
-            height: 50,
-            yaw: -4.4,
-            pitch: 0.01,
-            goesTo: 'F0OutsideSC' 
-          },
+          // {
+          //   width: 50,
+          //   height: 50,
+          //   yaw: -4.4,
+          //   pitch: 0.01,
+          //   goesTo: 'F0OutsideSC' 
+          // },
           {
             width: 50,
             height: 50,
@@ -1723,20 +1723,20 @@ export default (locations = {
             pitch: 0.01,
             goesTo: 'F0Lounge' 
           },
-          {
-            width: 50,
-            height: 50,
-            yaw: -3,
-            pitch: 0.01,
-            goesTo: 'SpecialCollection1' 
-          },
-          {
-            width: 50,
-            height: 50,
-            yaw: -1.5,
-            pitch: 0.01,
-            goesTo: 'RightStairsEntranceLobby' 
-          },
+          // {
+          //   width: 50,
+          //   height: 50,
+          //   yaw: -3,
+          //   pitch: 0.01,
+          //   goesTo: 'SpecialCollection1' 
+          // },
+          // {
+          //   width: 50,
+          //   height: 50,
+          //   yaw: -1.5,
+          //   pitch: 0.01,
+          //   goesTo: 'RightStairsEntranceLobby' 
+          // },
         ],
       },
   
@@ -1818,46 +1818,46 @@ export default (locations = {
           {
             width: 50,
             height: 50,
-            yaw: 1.4,
-            pitch: 0.01,
+            yaw: -1,
+            pitch: 0.09,
             text: 'Click to enter one of the study rooms. They can be reserved for individual or group study sessions.',
           },
           {
             width: 50,
             height: 50,
-            yaw: 2.5,
-            pitch: 0.01,
+            yaw: 0.6,
+            pitch: 0.08,
             text: 'Click to explore more shelves. This way also leads to an exit.',
           },
           {
             width: 50,
             height: 50,
-            yaw: 3.5,
-            pitch: 0.01,
-            text: 'More shelves!--Italian Literature, etc.',
+            yaw: 0.9,
+            pitch: 0.09,
+            text: 'More shelves behind!--Italian Literature, etc.',
           },
           {
             width: 50,
             height: 50,
-            yaw: 4.5,
-            pitch: 0.01,
+            yaw: 2.2,
+            pitch: 0.09,
             text: 'More shelves--poetry and more literature',
           },
         ],
         transitions:[
-          //across from outside special collections
-          {
-            width: 50,
-            height: 50,
-            yaw: -1,
-            pitch: 0.01,
-            goesTo: 'F0OutsideSC' 
-          },
+          // //across from outside special collections
+          // {
+          //   width: 50,
+          //   height: 50,
+          //   yaw: -1,
+          //   pitch: 0.01,
+          //   goesTo: 'F0OutsideSC' 
+          // },
           //back to right outside special collections
           {
             width: 50,
             height: 50,
-            yaw: -2,
+            yaw: -3.4,
             pitch: 0.01,
             goesTo: 'OutsideSC' 
           },
@@ -1865,7 +1865,7 @@ export default (locations = {
           {
             width: 50,
             height: 50,
-            yaw: 1,
+            yaw: -1,
             pitch: 0.01,
             goesTo: 'F0150A' 
           },
@@ -1874,25 +1874,25 @@ export default (locations = {
           {
             width: 50,
             height: 50,
-            yaw: 2.8,
+            yaw: 0.6,
             pitch: 0.01,
             goesTo: 'F0LeftMostHall' 
           },
   
-          //Italian literature
+          // //Italian literature
           {
             width: 50,
             height: 50,
-            yaw: 3.8,
+            yaw: 0.9,
             pitch: 0.01,
             goesTo: 'F0AdjLeft' 
           },
   
-          //poetry and literature
+          // //poetry and literature
           {
             width: 50,
             height: 50,
-            yaw: 4.8,
+            yaw: 2.2,
             pitch: 0.01,
             goesTo: 'F0AdjRight' 
           },
@@ -1907,8 +1907,8 @@ export default (locations = {
           {
             width: 50,
             height: 50,
-            yaw: 4.2,
-            pitch: 0.01,
+            yaw: 0.9,
+            pitch: 0.09,
             text: 'More shelves--poetry and more literature',
           },
         ],
@@ -1916,14 +1916,14 @@ export default (locations = {
           {
             width: 50,
             height: 50,
-            yaw: 1,
+            yaw: 0.9,
             pitch: 0.01,
             goesTo: 'F0Lounge' 
           },
           {
             width: 50,
             height: 50,
-            yaw: 4,
+            yaw: 4.5,
             pitch: 0.01,
             goesTo: 'F0AdjRight' 
           },
@@ -1938,21 +1938,18 @@ export default (locations = {
           {
             width: 50,
             height: 50,
-            yaw: 2.5,
+            yaw: 4,
             pitch: 0.01,
-            text: 'More shelves--poetry and literature',
+            text: 'More shelves--English literature and poetry books in the end',
           },
         ],
         transitions:[
           {
             width: 50,
             height: 50,
-            yaw: 4,
+            yaw: 2.2,
             pitch: 0.01,
             goesTo: 'F0AdjLeft' 
-          },
-          {
-  
           },
         ],
       },
@@ -1965,14 +1962,14 @@ export default (locations = {
           {
             width: 50,
             height: 50,
-            yaw: -2,
+            yaw: 0.01,
             pitch: 0.01,
             goesTo: 'F0Lounge' 
           },
           {
             width: 50,
             height: 50,
-            yaw: 1,
+            yaw: -3.4,
             pitch: 0.01,
             goesTo: 'F0LeftMostHall2' 
           },
@@ -1986,14 +1983,14 @@ export default (locations = {
           {
             width: 50,
             height: 50,
-            yaw: -1,
+            yaw: 0,
             pitch: 0.01,
             goesTo: 'F0LeftMostHall' 
           },
           {
             width: 50,
             height: 50,
-            yaw: 2.5,
+            yaw: 3.5,
             pitch: 0.01,
             goesTo: 'F0LeftMostHall3' 
           },
@@ -2008,14 +2005,14 @@ export default (locations = {
           {
             width: 50,
             height: 50,
-            yaw: -2,
+            yaw: 0,
             pitch: 0.01,
             goesTo: 'F0LeftMostHall2' 
           },
           {
             width: 50,
             height: 50,
-            yaw: 3,
+            yaw: -3.1,
             pitch: 0.01,
             goesTo: 'F0LeftMostEnd' 
           },
@@ -2030,7 +2027,7 @@ export default (locations = {
           {
             width: 50,
             height: 50,
-            yaw: -1,
+            yaw: -5,
             pitch: 0.01,
             goesTo: 'F0LeftMostHall3' 
           },
