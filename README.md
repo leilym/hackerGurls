@@ -1,12 +1,20 @@
-## [Democratizing Propsective Student Tours: A Virtual Reality Tour into Middlebury College]
+## [Midd360°: A 360° Indoor-tour of campus for prospective students]
 ### Middlebury College, Computer Science CSCI 701 (Fall 2021)
+### Cynthia Chen, Yaqi Huang,and Leili Manafi
 
 ### about
-TODO: a few sentences describing your project
+The current prospective student tour system is not comprehensive nor accessible enough; 
+Students can’t see interior of buildings and virtual tours are not immersive.
+
+Our tour is interactive and self guided, there is indoor view of campus buildings--Davis, Axinn and McCullough Student center--
+and it is a platform that can be continued...
+We have also included an instructions file to allow for further build of this project.
+
 
 view our website [here]()
 
-### building
+
+### Initial building
 TODO: React 360 will need to be downloaded to get the project running. First make sure node.js is installed and has a version of 6.0.0 or higher. 
 
 npm install -g react-360-cli
