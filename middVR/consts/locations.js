@@ -595,7 +595,7 @@ export default (locations = {
             width: 50,
             height: 50,
             yaw: 8,
-            pitch: 0.01,
+            pitch: 0.09,
             text: 'This is the Technology Help Desk! Students come here for both hardware and software help.',
   
           },
@@ -611,6 +611,14 @@ export default (locations = {
           {
             width: 50,
             height: 50,
+            yaw: 1.3,
+            roll: 3,
+            pitch: 0.01,
+            goesTo: 'StairsDownFromHelpdesk', //up from main stairs 
+          },
+          {
+            width: 50,
+            height: 50,
             yaw: 1.1,
             pitch: 0.01,
             goesTo: 'StudyRoomStairs2nd', //needs to go upstairs from help desk
@@ -620,7 +628,7 @@ export default (locations = {
             height: 50,
             yaw: 1.7,
             pitch: 0.01,
-            goesTo: 'HelpDesk', //needs to go upstairs from help desk
+            goesTo: 'HelpDesk', 
           },
           {
             width: 50,
@@ -1020,6 +1028,7 @@ export default (locations = {
           width: 50,
           height: 50,
           yaw: 4.55,
+          roll:3,
           pitch: -.2,
           goesTo: 'FromEntranceRight',
         },
@@ -1620,18 +1629,20 @@ export default (locations = {
       StairsDownFromHelpdesk:{
         name: 'Stairs to Downstairs',
         img: "davis/StairsDownFromHelpdesk.JPG",
+
         transitions:[
           {
             width: 50,
             height: 50,
-            yaw: 1,
-            pitch: 0.01,
+            yaw: 3.6,
+            roll: 3,
+            pitch: -0.3,
             goesTo: 'F0OutsideSC'
           },
           {
             width: 50,
             height: 50,
-            yaw: 5,
+            yaw: 2.6,
             pitch: 0.05,
             goesTo: 'HelpDesk' //should go back upstairs but don't know if there is an image before helpdesk
           },
@@ -1642,18 +1653,12 @@ export default (locations = {
       HelpDesk:{
         name:'ITS HelpDesk',
         img: "davis/HelpDesk.JPG",
+
         transitions:[
           {
             width: 50,
             height: 50,
-            yaw: 2,
-            pitch: 0.05,
-            goesTo: 'StairsDownFromHelpdesk'
-          },
-          {
-            width: 50,
-            height: 50,
-            yaw: 4.3,
+            yaw: 1,
             pitch: 0.05,
             goesTo: 'FromEntranceRight'
           },
@@ -1663,35 +1668,52 @@ export default (locations = {
       F0OutsideSC:{
         name: 'Stairs to Downstairs',
         img: "davis/F0OutsideSC.JPG",
+        tooltips: [
+          {
+            width: 50,
+            height: 50,
+            yaw: -1.2,
+            pitch: 0.09,
+            text: 'Upstairs',
+          },
+          {
+            width: 50,
+            height: 50,
+            yaw: 2.8,
+            pitch: 0.09,
+            text: 'Towards Literature and Poetry books shelves',
+          },
+        ],
         transitions:[
           {
             width: 50,
             height: 50,
-            yaw: -5,
+            yaw: -1.2,
             pitch: 0.01,
             goesTo: 'StairsDownFromHelpdesk' 
           },
           {
             width: 50,
             height: 50,
-            yaw: -4,
-            pitch: 0.01,
-            goesTo: 'F0Lounge' 
-          },
-          {
-            width: 50,
-            height: 50,
-            yaw: -2,
+            yaw: 0.3,
             pitch: 0.01,
             goesTo: 'OutsideSC' 
           },
+          // //poetry and literature
           {
             width: 50,
             height: 50,
-            yaw: -3,
+            yaw: 2.8,
             pitch: 0.01,
-            goesTo: 'RightStairsEntranceLobby' 
+            goesTo: 'F0AdjRight' 
           },
+          // {
+          //   width: 50,
+          //   height: 50,
+          //   yaw: -3,
+          //   pitch: 0.01,
+          //   goesTo: 'RightStairsEntranceLobby' 
+          // },
         ],
       },
   
@@ -1702,20 +1724,34 @@ export default (locations = {
           {
             width: 50,
             height: 50,
-            yaw: -3.5,
-            pitch: 0.01,
+            yaw: 9,
+            pitch: 0.09,
             text: 'Middlebury College Special Collections houses the college’s rare book, manuscript, and archival collections.',
+          },
+          {
+            width: 50,
+            height: 50,
+            yaw: 8.2,
+            pitch: 0.09,
+            text: 'Moves a bit forward-- facing the stairs to upstairs',
           },
         ],
   
         transitions:[
-          // {
-          //   width: 50,
-          //   height: 50,
-          //   yaw: -4.4,
-          //   pitch: 0.01,
-          //   goesTo: 'F0OutsideSC' 
-          // },
+          {
+            width: 50,
+            height: 50,
+            yaw: 4.7,
+            pitch: 0.01,
+            goesTo: 'RightStairsEntranceLobby' 
+          },
+          {
+            width: 50,
+            height: 50,
+            yaw: 8.2,
+            pitch: 0.01,
+            goesTo: 'F0OutsideSC' 
+          },
           {
             width: 50,
             height: 50,
@@ -1723,13 +1759,13 @@ export default (locations = {
             pitch: 0.01,
             goesTo: 'F0Lounge' 
           },
-          // {
-          //   width: 50,
-          //   height: 50,
-          //   yaw: -3,
-          //   pitch: 0.01,
-          //   goesTo: 'SpecialCollection1' 
-          // },
+          {
+            width: 50,
+            height: 50,
+            yaw: 9,
+            pitch: 0.01,
+            goesTo: 'SpecialCollection1' 
+          },
           // {
           //   width: 50,
           //   height: 50,
@@ -1843,16 +1879,23 @@ export default (locations = {
             pitch: 0.09,
             text: 'More shelves--poetry and more literature',
           },
+          {
+            width: 50,
+            height: 50,
+            yaw: -3.8,
+            pitch: 0.09,
+            text: 'Towards the stairs',
+          },
         ],
         transitions:[
           // //across from outside special collections
-          // {
-          //   width: 50,
-          //   height: 50,
-          //   yaw: -1,
-          //   pitch: 0.01,
-          //   goesTo: 'F0OutsideSC' 
-          // },
+          {
+            width: 50,
+            height: 50,
+            yaw: -3.8,
+            pitch: 0.01,
+            goesTo: 'F0OutsideSC' 
+          },
           //back to right outside special collections
           {
             width: 50,
@@ -1888,17 +1931,8 @@ export default (locations = {
             goesTo: 'F0AdjLeft' 
           },
   
-          // //poetry and literature
-          {
-            width: 50,
-            height: 50,
-            yaw: 2.2,
-            pitch: 0.01,
-            goesTo: 'F0AdjRight' 
-          },
         ],
       },
-  
   
       F0AdjLeft:{
         name: "Adjecent Left Side shelves",
@@ -1907,7 +1941,7 @@ export default (locations = {
           {
             width: 50,
             height: 50,
-            yaw: 0.9,
+            yaw: 4.5,
             pitch: 0.09,
             text: 'More shelves--poetry and more literature',
           },
@@ -1916,7 +1950,7 @@ export default (locations = {
           {
             width: 50,
             height: 50,
-            yaw: 0.9,
+            yaw: 6,
             pitch: 0.01,
             goesTo: 'F0Lounge' 
           },
@@ -1926,6 +1960,13 @@ export default (locations = {
             yaw: 4.5,
             pitch: 0.01,
             goesTo: 'F0AdjRight' 
+          },
+          {
+            width: 50,
+            height: 50,
+            yaw: 7.5,
+            pitch: 0.01,
+            goesTo: 'F0LeftMostHall' 
           },
         ],
       },
@@ -1940,7 +1981,7 @@ export default (locations = {
             height: 50,
             yaw: 4,
             pitch: 0.01,
-            text: 'More shelves--English literature and poetry books in the end',
+            text: 'More shelves--English literature and poetry books [in the end]',
           },
         ],
         transitions:[
